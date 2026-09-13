@@ -3,6 +3,8 @@
 ペア数列の展開がいつか必ず止まることを、Carlson の構造 $`\mathcal{R}_2`$ の関係をラベルに使って Lean 4 で証明した。
 ラベルの関係の定義には、構成可能階層も許容順序数も使っていない。
 
+3 行（トリオ数列）への拡張は [TSS.md](TSS.md) にある。Lean のコードは 1〜3 行をまとめて扱う。
+
 ## 結論
 
 **定理（停止性）.** $`A`$ をペア数列、$`n : \mathbb{N} \to \mathbb{N}`$ を任意の関数とし、
@@ -75,10 +77,10 @@ Lean では論理式を構文にしない。
 \mathrm{diag}(v)(a, b) = \bigl( [v_a \le v_b],\ [v_a \le_1 v_b],\ [v_a \le_2 v_b] \bigr)
 ```
 
-- パラメータ $`\vec p`$ を持つ $`\Sigma_2`$ 文は、次の形で表す。$`\Sigma_1`$ 文は $`\vec y`$ が空の場合である。
+- パラメータ $`\vec p`$ を持つ $`\Sigma_2`$ 文は、次の形で表す。$`\Sigma_1`$ 文は $`\vec y`$ のブロックが無い場合である。
 
 ```math
-M \models \exists \vec x\ \forall \vec y\ \bigl(\mathrm{diag}(\vec p, \vec x, \vec y) \in D\bigr)
+M \models \exists \vec x\ \neg\, \exists \vec y\ \neg\, \bigl(\mathrm{diag}(\vec p, \vec x, \vec y) \in D\bigr)
 ```
 
 基本性質：
@@ -122,7 +124,7 @@ M \models \exists \vec x\ \forall \vec y\ \bigl(\mathrm{diag}(\vec p, \vec x, \v
 **$`n = 1`$ のとき.** 上の文に、$`y_i \lt_1 \beta`$ となる各 $`i`$ について
 
 ```math
-\forall v\ \bigl(u_i \le v \Rightarrow u_i \le_1 v\bigr)
+\forall v_i\ \bigl(u_i \le v_i \Rightarrow u_i \le_1 v_i\bigr)
 ```
 
 を足した $`\Sigma_2`$ 文を使う。
@@ -145,7 +147,7 @@ c_0 \lt_2 c_1 \lt_2 \cdots \lt_2 c_n
 
 $`\lt_2`$ 鎖があることは、$`\omega_1`$ の中の閉包で示す。
 
-パラメータが $`\gamma`$ 未満で $`\omega_1`$ で真な $`\Sigma_2`$ 文のそれぞれについて証人を 1 つ選び、その成分に $`+1`$ したもの全体の上限を取る。これと $`\gamma`$ の大きいほうに $`+1`$ したものを $`\mathrm{next}(\gamma)`$ とする。
+パラメータが $`\gamma`$ 未満で $`\omega_1`$ で真な文のそれぞれについて、最初のブロックの証人を 1 つ選び、その成分に $`+1`$ したもの全体の上限を取る。これと $`\gamma`$ の大きいほうに $`+1`$ したものを $`\mathrm{next}(\gamma)`$ とする。
 
 ```math
 \lambda(\gamma) = \sup_{t \lt \omega} \mathrm{next}^t(\gamma)
@@ -157,9 +159,7 @@ $`\lt_2`$ 鎖があることは、$`\omega_1`$ の中の閉包で示す。
 \gamma \lt \omega_1 \Rightarrow \gamma \lt \lambda(\gamma) \lt \omega_1
 ```
 
-```math
-\gamma \lt \omega_1 \Rightarrow (\lambda(\gamma); \le, \le_1, \le_2) \preceq_{\Sigma_2} (\omega_1; \le, \le_1, \le_2)
-```
+- $`\gamma \lt \omega_1`$ なら、パラメータが $`\lambda(\gamma)`$ 未満の文の真偽は、$`\lambda(\gamma)`$ と $`\omega_1`$ ですべて一致する
 
 ```math
 \gamma, \delta \lt \omega_1 \wedge \lambda(\gamma) \lt \lambda(\delta) \Rightarrow \lambda(\gamma) \lt_2 \lambda(\delta)
@@ -170,10 +170,8 @@ $`\lt_2`$ 鎖があることは、$`\omega_1`$ の中の閉包で示す。
 ```
 
 - $`\mathrm{next}(\gamma) \lt \omega_1`$ になるのは、論理式とパラメータの組の全体が可算なので、証人の上限が $`\omega_1`$ 未満の順序数の可算個の上限になるからである
-- 2 行目は Tarski–Vaught の判定と同じ議論である
-  - $`\omega_1`$ で真な $`\Sigma_2`$ 文は、$`\lambda(\gamma)`$ の中に証人を持つ
-  - 逆向きは、$`\forall`$ 部分の反例を $`\Sigma_1`$ 文にして、上の事実を使う
-- 3 行目は、どちらも $`\omega_1`$ の $`\Sigma_2`$ 初等部分構造であることから出る
+- 真偽の一致は、ブロックの数についての帰納法で示す。$`\omega_1`$ で真な文の最初のブロックの証人は、$`\lambda(\gamma)`$ の中にある
+- $`\lambda(\gamma) \lt_2 \lambda(\delta)`$ は、どちらも $`\omega_1`$ と文の真偽が一致することから出る
 
 ## 6. 高さの下降と停止性
 
@@ -201,44 +199,45 @@ $`\lt_2`$ 鎖があることは、$`\omega_1`$ の中の閉包で示す。
   - この事実は形式化していない
 - **他の版のペア数列との一致**：扱うのは BM4 の 2 行版だけである
 - **3 行以上**
-  - (d) に $`m = 1`$ の条件 $`y_i \lt_2 \beta \Rightarrow y'_i \lt_2 \alpha`$ が加わる
-  - $`\le_2`$ は $`\le`$ に沿っては閉じていないので、§4 の $`n = 1`$ の方法はそのままでは使えない
+  - 3 行では (d) に $`m = 1`$ の条件 $`y_i \lt_2 \beta \Rightarrow y'_i \lt_2 \alpha`$ が加わる
+  - $`\mathcal{R}_3`$ を使うと示せる。[TSS.md](TSS.md) にある
+  - 4 行以上は扱っていない
 
 ## 8. Lean との対応
 
+Lean では $`\mathcal{R}_N`$ を一般の $`N`$ で定義している。ペア数列は $`N = 2`$ の場合である。
+
 | 数学 | Lean | ファイル |
 |---|---|---|
-| $`\le_1`$、$`\le_2`$ の定義 | `R2fix`, `le1`, `le2`, `le1_iff`, `le2_iff` | [`R2.lean`](../lean/Wilken/R2.lean) |
-| $`\Sigma_2`$ 文、原子図式 | `Sat`, `diag` | 同上 |
-| $`a \le_2 b \Rightarrow a \le_1 b`$ | `le1_of_le2` | 同上 |
-| 推移律 | `le1_trans`, `le2_trans` | 同上 |
-| $`a \le b \le c \wedge a \le_1 c \Rightarrow a \le_1 b`$ | `le1_of_le_of_le1` | 同上 |
-| 連続性 | `le1_of_forall` | 同上 |
-| $`\alpha \lt_1 \beta`$ なら後続で閉じる | `succ_lt_of_lt1` | 同上 |
-| $`\lhd_0`$、$`\lhd_1`$ | `rel` | [`Reflect.lean`](../lean/Wilken/Reflect.lean) |
-| 有限反映 $`n = 0`$ | `reflect_zero` | 同上 |
+| $`\le_1`$、$`\le_2`$ の定義 | `RFix`, `RN`, `lev`, `lev_iff` | [`Basic.lean`](../lean/Pattern/Basic.lean) |
+| $`\lt_1`$、$`\lt_2`$ | `lab` | 同上 |
+| 論理式、原子図式 | `Sig`, `diag`, `Elem` | 同上 |
+| 推移律、$`\le_2 \Rightarrow \le_1`$ | `lev_trans`, `lev_mono` | 同上 |
+| $`a \le b \le c \wedge a \le_1 c \Rightarrow a \le_1 b`$ | `lev0_of_le` | 同上 |
+| 連続性 | `lev0_of_forall` | 同上 |
+| $`\alpha \lt_1 \beta`$ なら後続で閉じる | `succ_lt_of_lab0` | 同上 |
+| 有限反映 $`n = 0`$ | `reflect_zero` | [`Reflect.lean`](../lean/Pattern/Reflect.lean) |
 | 有限反映 $`n = 1`$ | `reflect_one` | 同上 |
 | ラベルの体系 | `labelSystem` | 同上 |
-| $`\mathrm{next}`$、$`\lambda`$ | `next`, `lam` | [`Chain.lean`](../lean/Wilken/Chain.lean) |
-| $`\lambda(\gamma) \preceq_{\Sigma_2} \omega_1`$ | `lam_elem` | 同上 |
-| $`\lambda(\gamma) \lt_2 \lambda(\delta)`$ | `lt2_lam` | 同上 |
-| $`\lt_2`$ 鎖の存在 | `exists_lt2_chain` | 同上 |
-| $`S_n`$ | `stair` | [`PSS.lean`](../lean/Wilken/PSS.lean) |
-| ペア数列 | `PSS` | 同上 |
+| $`\mathrm{next}`$、$`\lambda`$ | `next`, `lam` | [`Chain.lean`](../lean/Pattern/Chain.lean) |
+| $`\lambda(\gamma)`$ と $`\omega_1`$ の一致 | `lam_elem` | 同上 |
+| $`\lambda(\gamma) \lt_2 \lambda(\delta)`$ | `lab_lam` | 同上 |
+| 鎖の存在 | `exists_chain` | 同上 |
+| $`S_n`$、ペア数列 | `stair`, `Std` | [`Main.lean`](../lean/Pattern/Main.lean) |
 | $`S_n`$ のラベル | `stable_stair` | 同上 |
-| 空でないペア数列のラベル | `pss_stable` | 同上 |
-| 停止性 | `pss_terminates` | 同上 |
-| 整礎性 | `PR_wf` | 同上 |
+| 空でないペア数列のラベル | `std_stable` | 同上 |
+| 停止性 | `pss_terminates`（一般形 `terminates`） | 同上 |
+| 整礎性 | `StdR_wf` | 同上 |
 | 命題 19.1 | `descent` | [`Bm4/Label.lean`](../lean/Bm4/Label.lean) |
 
 ## 9. ファイル
 
 | ファイル | 行数 | 内容 |
 |---|---:|---|
-| [`lean/Wilken/R2.lean`](../lean/Wilken/R2.lean) | 280 | $`\mathcal{R}_2`$ の定義と基本性質 |
-| [`lean/Wilken/Reflect.lean`](../lean/Wilken/Reflect.lean) | 199 | 有限反映、ラベルの体系 |
-| [`lean/Wilken/Chain.lean`](../lean/Wilken/Chain.lean) | 242 | $`\lt_2`$ 鎖の存在 |
-| [`lean/Wilken/PSS.lean`](../lean/Wilken/PSS.lean) | 96 | ペア数列の定義、停止性、整礎性 |
+| [`lean/Pattern/Basic.lean`](../lean/Pattern/Basic.lean) | 454 | $`\mathcal{R}_N`$ の定義と基本性質 |
+| [`lean/Pattern/Reflect.lean`](../lean/Pattern/Reflect.lean) | 329 | 有限反映（$`n = 0, 1, 2`$）、ラベルの体系 |
+| [`lean/Pattern/Chain.lean`](../lean/Pattern/Chain.lean) | 209 | すべての段で結ばれた鎖の存在 |
+| [`lean/Pattern/Main.lean`](../lean/Pattern/Main.lean) | 111 | 標準列の定義、1〜3 行の停止性、整礎性 |
 | `lean/Bm4/` | 2,923 | BM4 の組合せ部分（配列、展開、コピー補題、命題 19.1） |
 
 `lean/Bm4/` は [koteitan/dh-bms-wf-formal](https://github.com/koteitan/dh-bms-wf-formal) の `lean/Bm4/` から、組合せ部分だけをコピーした。
@@ -247,7 +246,7 @@ $`\lt_2`$ 鎖があることは、$`\omega_1`$ の中の閉包で示す。
 - 行数 $`r`$ を界面の引数にし、有限反映は $`n \lt r`$ の場合だけを要求する
 - 使われていない単調性の条件と、初期列 $`E_r`$ のためだけの初期対の条件を外した
 
-3 行以上では §4 の方法がそのままでは使えない（§7）ので、行数を固定した界面にした。
+4 行以上では有限反映を示していないので、行数を固定した界面にした。
 
 ## 10. ビルド
 

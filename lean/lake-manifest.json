@@ -111,7 +111,7 @@
    "configFile": "lakefile.toml"
   }
  ],
- "name": "wilkenbms",
+ "name": "bmselempattern",
  "lakeDir": ".lake",
  "fixedToolchain": false
 }

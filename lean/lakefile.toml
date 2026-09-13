@@ -1,5 +1,5 @@
-name = "wilkenbms"
-defaultTargets = ["WilkenBms"]
+name = "bmselempattern"
+defaultTargets = ["BmsElemPattern"]
 
 [[require]]
 name = "mathlib"
@@ -11,8 +11,8 @@ name = "Bm4"
 globs = ["Bm4.+"]
 
 [[lean_lib]]
-name = "Wilken"
-globs = ["Wilken.+"]
+name = "Pattern"
+globs = ["Pattern.+"]
 
 [[lean_lib]]
-name = "WilkenBms"
+name = "BmsElemPattern"

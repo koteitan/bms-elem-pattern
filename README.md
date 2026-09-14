@@ -13,7 +13,7 @@ R3（Σ₃ まで）を使って、トリオ数列システムにも広げた。
 ### バシク行列システムと、その停止性
 
 1. Bashicu, 「BASIC言語による巨大数のまとめ」, 巨大数研究 Wiki. [ページ](https://googology.fandom.com/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0%3ABashicuHyudora/BASIC%E8%A8%80%E8%AA%9E%E3%81%AB%E3%82%88%E3%82%8B%E5%B7%A8%E5%A4%A7%E6%95%B0%E3%81%AE%E3%81%BE%E3%81%A8%E3%82%81#%E3%83%90%E3%82%B7%E3%82%AF%E8%A1%8C%E5%88%97%E6%95%B0%28Bashicu_matrix_number%29)
-2. P進大好きbot, 「ペア数列の停止性」, 巨大数研究 Wiki. [ページ](https://googology.fandom.com/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0%3AP%E9%80%B2%E5%A4%A7%E5%A5%BD%E3%81%8Dbot/%E3%83%9A%E3%82%A2%E6%95%B0%E5%88%97%E3%81%AE%E5%81%9C%E6%AD%A2%E6%80%A7)
+2. P進大好きbot, 「ペア数列の停止性」, 巨大数研究 Wiki (2018). [ページ](https://googology.fandom.com/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0%3AP%E9%80%B2%E5%A4%A7%E5%A5%BD%E3%81%8Dbot/%E3%83%9A%E3%82%A2%E6%95%B0%E5%88%97%E3%81%AE%E5%81%9C%E6%AD%A2%E6%80%A7)
 3. R. Hunter, "Well-Orderedness of the Bashicu Matrix System", arXiv:2307.04606 (2023). [arXiv](https://arxiv.org/abs/2307.04606)
 4. DH, 「Bashicu Matrix System ver. 4 の停止性と展開関係の整礎性」, 巨大数研究 Wiki (2026). [論文 PDF](https://googology.fandom.com/ja/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%3ABM4%28%E4%BD%9C%E6%88%90%E8%80%85%E6%83%85%E5%A0%B1%E4%BB%98%E3%81%8D%29.pdf), [発表のブログ記事](https://googology.fandom.com/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0%3ADeltaEta22223/BM4%E3%81%AE%E5%81%9C%E6%AD%A2%E6%80%A7%E8%A8%BC%E6%98%8E)
 5. koteitan, dh-bms-wf-formal（4 の Lean 4 による形式化）. [GitHub](https://github.com/koteitan/dh-bms-wf-formal)。このリポジトリの `lean/Bm4/` はここからコピーした。

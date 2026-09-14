@@ -1,4 +1,4 @@
-[← Back](README.md)
+[← Back](README.md) | [English](en/06-finite-reflection.md) | [Japanese](06-finite-reflection.md)
 
 # 有限反映
 

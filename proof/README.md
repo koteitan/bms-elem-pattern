@@ -1,3 +1,5 @@
+[← Back](../README.md) | [English](README-en.md) | [Japanese](README.md)
+
 # Σ₂ 初等部分構造によるペア数列システムの停止性の証明
 
 ペア数列の展開がいつか必ず止まることを、Carlson の構造 $`\mathcal{R}_2`$ の関係をラベルに使って Lean 4 で証明した。

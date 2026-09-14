@@ -1,4 +1,4 @@
-[← Back](README.md)
+[← Back](README.md) | [English](en/05-arrays-labels.md) | [Japanese](05-arrays-labels.md)
 
 # 配列、展開、安定ラベル
 

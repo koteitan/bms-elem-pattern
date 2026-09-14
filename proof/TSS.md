@@ -1,3 +1,5 @@
+[← Back](README.md) | [English](en/TSS.md) | [Japanese](TSS.md)
+
 # Σ₃ 初等部分構造によるトリオ数列システムの停止性の証明
 
 [ペア数列の証明](README.md) を 3 行に広げた。

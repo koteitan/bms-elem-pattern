@@ -1,4 +1,4 @@
-[← Back](README.md)
+[← Back](README.md) | [English](en/02-elementary-substructure.md) | [Japanese](02-elementary-substructure.md)
 
 # 構造と初等部分構造
 

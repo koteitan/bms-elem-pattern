@@ -1,4 +1,4 @@
-[← Back](README.md)
+[← Back](README.md) | [English](en/07-closure-chains.md) | [Japanese](07-closure-chains.md)
 
 # ω₁ の中の閉包と、すべての段で結ばれた鎖
 

@@ -1,4 +1,4 @@
-[← Back](README.md)
+[← Back](README.md) | [English](en/08-termination.md) | [Japanese](08-termination.md)
 
 # 停止性と整礎性
 

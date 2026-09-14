@@ -1,3 +1,5 @@
+[English](README-en.md) | [Japanese](README.md)
+
 # Σ₂ 初等部分構造によるペア数列システムの停止性の証明
 
 ペア数列システムの展開がいつか必ず止まることを、Lean 4 で証明した。

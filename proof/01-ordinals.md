@@ -1,4 +1,4 @@
-[← Back](README.md)
+[← Back](README.md) | [English](en/01-ordinals.md) | [Japanese](01-ordinals.md)
 
 # 順序数と ω₁
 

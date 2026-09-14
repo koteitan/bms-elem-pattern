@@ -1,4 +1,4 @@
-[← Back](README.md)
+[← Back](README.md) | [English](en/03-patterns.md) | [Japanese](03-patterns.md)
 
 # R_N（elementary patterns of resemblance）
 

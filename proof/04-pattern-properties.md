@@ -1,4 +1,4 @@
-[← Back](README.md)
+[← Back](README.md) | [English](en/04-pattern-properties.md) | [Japanese](04-pattern-properties.md)
 
 # R_N の性質 P1〜P7
 

@@ -37,10 +37,14 @@ document.addEventListener('click', e => {
   }
 });
 
-// ---- 変換（ダミー）
+// ---- 変換
 function convert() {
   const lines = bmsEl.value.split('\n');
-  aporEl.value = lines.map(line => line.trim() === '' ? '' : '(dummy) not implemented yet').join('\n');
+  aporEl.value = lines.map(line => {
+    if (line.trim() === '') return '';
+    const r = Bms2apor.translate(line);
+    return r.pattern !== null ? `${r.pattern}   point: ${r.point}` : r.error;
+  }).join('\n');
 }
 
 // ---- URL query

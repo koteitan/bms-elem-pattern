@@ -8,7 +8,7 @@
 </head>
 <body>
 <header>
-  <h1>Translation of BMS to pure patterns of resemblance <span class="version">v0.1.1</span></h1>
+  <h1>Translation of BMS to pure patterns of resemblance <span class="version">v0.1.2</span></h1>
   <div class="menu">
     <button id="menu-btn" class="menu-btn" aria-label="menu" aria-expanded="false">&#9776;</button>
     <div id="menu-panel" class="menu-panel" hidden>
@@ -39,7 +39,7 @@
       <li>3 rows: the output is a respecting forest of order 3. The order is kept for the least ordinal that can
           label the last column, but it is not known whether that labelling is an exact copy of the output.</li>
       <li>4 rows and more: not supported.</li>
-      <li>Standard matrices are assumed.</li>
+      <li>Standard matrices of BM4 or of <a href="#dbms">DBMS</a> are assumed.</li>
     </ul>
 
     <h2>Rule</h2>
@@ -98,6 +98,24 @@
     <p>For 3 rows, steps 1, 2 and 5 still work, so the least ordinal that can label the last column keeps the order.
        Step 3 is not known for order 3.</p>
 
+    <h2 id="dbms">DBMS</h2>
+    <p>DBMS has the same expansion rule as BM4 and the initial matrices
+       <code>(0)(1)(2,1)(3,2,1)</code>&hellip;, whose column <var>k</var> is (<var>k</var>, <var>k</var>&minus;1, &hellip;, 1);
+       missing entries are 0. The same rule translates it, for example <code>(0)(1)(2,1)</code> &rarr;
+       <code>a b(a) c(b,b)</code>.</p>
+    <ul>
+      <li>The order is kept in the same way. Steps 1&ndash;4 do not depend on the initial matrices, and Hunter's proof of
+          Lemma 2.3 only uses that the initial matrices are reached from each other by expansions, which holds for DBMS
+          because <var>D</var><sub><var>n</var></sub> = <var>D</var><sub><var>n</var>+1</sub>[0].</li>
+      <li>For some matrices with one root, the first node is realized at the value of the matrix:
+          <code>(0)(1)</code> = &omega; gives a = &omega;, and <code>(0)(1)(2,1)</code> = &epsilon;<sub>0</sub> gives
+          a = &epsilon;<sub>0</sub>, b = &epsilon;<sub>0</sub>&middot;&omega;, c = &epsilon;<sub>0</sub>&middot;(&omega;+1).</li>
+      <li>This fails in general. <code>(0)(1)(2,1)(1)</code> = &epsilon;<sub>0</sub>&middot;&omega; (its expansions are
+          <code>(0)(1)(2,1)</code> repeated) gives <code>a b(a) c(b,b) d(a)</code>. Since a &le;<sub>1</sub> d and
+          b &lt;<sub>2</sub> c lie below d, the &Sigma;<sub>1</sub> sentence &ldquo;there is a &lt;<sub>2</sub>-pair above
+          p&rdquo; must hold below a for every p &lt; a, so a &gt; &epsilon;<sub>0</sub>&middot;(&omega;+1).</li>
+    </ul>
+
     <h2>Checks</h2>
     <ul>
       <li>Respecting forests (&le;<sub><var>k</var>+1</sub> &sube; &le;<sub><var>k</var></sub>, and
@@ -112,6 +130,10 @@
       <li>1 row: with Carlson's formula for &le;<sub>1</sub> below &epsilon;<sub>0</sub>, the columns of every standard
           primitive sequence of length at most 9 (1204 sequences) can be placed so that the relations match exactly and
           the points increase; for a sequence with one root, the first column is placed at the value of the sequence.</li>
+      <li>DBMS (standardness by yaBMS with <code>-v DBMS</code>): respecting forests for all 1719 standard 2-row matrices
+          with at most 7 columns and all 552 standard 3-row matrices with at most 6 columns; step 5 directly for all
+          63546 pairs of 2-row matrices with at most 6 columns and all 5050 pairs of 3-row matrices with at most 5
+          columns.</li>
     </ul>
 
     <h2>Input</h2>

@@ -8,7 +8,7 @@
 </head>
 <body>
 <header>
-  <h1>Translation of BMS to pure patterns of resemblance <span class="version">v0.1.0</span></h1>
+  <h1>Translation of BMS to pure patterns of resemblance <span class="version">v0.1.1</span></h1>
   <div class="menu">
     <button id="menu-btn" class="menu-btn" aria-label="menu" aria-expanded="false">&#9776;</button>
     <div id="menu-panel" class="menu-panel" hidden>
@@ -90,9 +90,10 @@
       <li>By 2 and 3, the least realization of the last node of <var>A</var>[<var>n</var>] is below the last value of
           <var>g</var>, which is below the least realization of the last node of <var>A</var>. So every expansion
           lowers the point.</li>
-      <li>If <var>A</var> &lt; <var>B</var> are standard, some <var>B</var>[<var>n</var>] is &ge; <var>A</var>; repeating
-          this reaches <var>A</var> from <var>B</var> by expansions. This step is only checked, not proved here (see
-          Checks).</li>
+      <li>If <var>A</var> &lt; <var>B</var> are standard in the lexicographic order, then <var>A</var> is reached from
+          <var>B</var> by expansions: R. Hunter, <a href="https://arxiv.org/abs/2307.04606">Well-Orderedness of the
+          Bashicu Matrix System</a>, Lemma 2.3 and Corollary 2.4 (the order given by expansions is total and coincides
+          with the lexicographic order).</li>
     </ol>
     <p>For 3 rows, steps 1, 2 and 5 still work, so the least ordinal that can label the last column keeps the order.
        Step 3 is not known for order 3.</p>
@@ -104,8 +105,9 @@
           <var>p</var> &le;<sub><var>k</var>+1</sub> <var>r</var> implies <var>p</var> &le;<sub><var>k</var>+1</sub> <var>q</var>):
           all 44653 standard 2-row matrices with at most 8 columns and all 13628 standard 3-row matrices with at most
           6 columns.</li>
-      <li>Step 5: all 824970 pairs of standard 2-row matrices with at most 6 columns and all 924120 pairs of standard
-          3-row matrices with at most 5 columns (expansion BM4, standardness by
+      <li>Step 5, directly: for all 824970 pairs of standard 2-row matrices with at most 6 columns and all 924120 pairs of
+          standard 3-row matrices with at most 5 columns, some expansion of the larger one is &ge; the smaller one
+          (expansion BM4, standardness by
           <a href="https://github.com/koteitan/yaBMS">yaBMS</a>).</li>
       <li>1 row: with Carlson's formula for &le;<sub>1</sub> below &epsilon;<sub>0</sub>, the columns of every standard
           primitive sequence of length at most 9 (1204 sequences) can be placed so that the relations match exactly and

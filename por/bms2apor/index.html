@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Translation of BMS to additive patterns of resemblance</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Translation of BMS to additive patterns of resemblance <span class="version">v0.0.1 (dummy)</span></h1>
+  <div class="menu">
+    <button id="menu-btn" class="menu-btn" aria-label="menu" aria-expanded="false">&#9776;</button>
+    <div id="menu-panel" class="menu-panel" hidden>
+      <label><input type="checkbox" id="opt-dark"> dark mode</label>
+      <a href="https://github.com/koteitan/bms-elem-pattern">source (GitHub)</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="panes">
+    <div class="pane">
+      <label for="bms">BMS</label>
+      <textarea id="bms" spellcheck="false" placeholder="(0,0,0)(1,1,1)&#10;(0,0)(1,1)(2,2)&#10;1 行 1 行列 / one matrix per line"></textarea>
+    </div>
+    <div class="arrow">&rarr;</div>
+    <div class="pane">
+      <label for="apor">Additive PoR</label>
+      <textarea id="apor" spellcheck="false" readonly></textarea>
+    </div>
+  </div>
+
+  <section class="notes">
+    <h2>状態 / Status</h2>
+    <ul>
+      <li>これはデプロイ確認用のダミーです。変換はまだ実装していません。<br>
+          This is a dummy page to test the deployment. The translation is not implemented yet.</li>
+    </ul>
+  </section>
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Translation of BMS to pure patterns of resemblance</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Translation of BMS to pure patterns of resemblance <span class="version">v0.1.0</span></h1>
+  <div class="menu">
+    <button id="menu-btn" class="menu-btn" aria-label="menu" aria-expanded="false">&#9776;</button>
+    <div id="menu-panel" class="menu-panel" hidden>
+      <label><input type="checkbox" id="opt-dark"> dark mode</label>
+      <a href="../bms2apor/">additive version</a>
+      <a href="https://github.com/koteitan/bms-elem-pattern">source (GitHub)</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="panes">
+    <div class="pane">
+      <label for="bms">BMS</label>
+      <textarea id="bms" spellcheck="false" placeholder="(0)(1)(2)&#10;(0,0)(1,1)(2,1)&#10;(0,0,0)(1,1,1)(2,2,1)&#10;one matrix per line"></textarea>
+    </div>
+    <div class="arrow">&rarr;</div>
+    <div class="pane">
+      <label for="por">Pure PoR</label>
+      <textarea id="por" spellcheck="false" readonly></textarea>
+    </div>
+  </div>
+
+  <section class="notes">
+    <h2>Status</h2>
+    <ul>
+      <li>1 and 2 rows: the translation keeps the order of matrices (see <a href="#order">Why the order is kept</a>).</li>
+      <li>3 rows: the output is a respecting forest of order 3. The order is kept for the least ordinal that can
+          label the last column, but it is not known whether that labelling is an exact copy of the output.</li>
+      <li>4 rows and more: not supported.</li>
+      <li>Standard matrices are assumed.</li>
+    </ul>
+
+    <h2>Rule</h2>
+    <p>Every column is a node, and the ancestors of a column give the relations:</p>
+    <ul>
+      <li>column <var>j</var> is a <var>k</var>-ancestor of column <var>i</var> &rArr;
+          node <var>j</var> &lt;<sub><var>k</var>+1</sub> node <var>i</var>, and nothing else is related.</li>
+      <li>The <var>k</var>-parent of a column is the rightmost candidate with a smaller entry in row <var>k</var>.
+          The candidates are all columns to the left for <var>k</var> = 0, and the (<var>k</var>&minus;1)-ancestors
+          for <var>k</var> &ge; 1 (BM4). A <var>k</var>-ancestor is reached by following <var>k</var>-parents.</li>
+      <li>The relations are those of Carlson's structure
+          R<sub>N</sub> = (Ord; &le;, &le;<sub>1</sub>, &hellip;, &le;<sub>N</sub>), where
+          &alpha; &le;<sub>i</sub> &beta; means (&alpha;; &le;, &le;<sub>1</sub>, &hellip;) is a
+          &Sigma;<sub>i</sub>-elementary substructure of (&beta;; &le;, &le;<sub>1</sub>, &hellip;).</li>
+    </ul>
+
+    <h2>Output</h2>
+    <ul>
+      <li>Nodes are named <code>a</code>, <code>b</code>, <code>c</code>, &hellip; from left to right, one per column.</li>
+      <li><code>x(p)</code>: <code>p</code> is the largest node with <code>p</code> &lt;<sub>1</sub> <code>x</code>.
+          <code>x(p,q)</code> adds the largest <code>q</code> with <code>q</code> &lt;<sub>2</sub> <code>x</code>, and
+          <code>x(p,q,r)</code> the largest <code>r</code> with <code>r</code> &lt;<sub>3</sub> <code>x</code>.
+          The full relations are generated from these links.</li>
+      <li><code>point</code> is the last node.</li>
+    </ul>
+    <p>Example: <code>(0,0)(1,1)(2,1)</code> &rarr; <code>a b(a,a) c(b,a)   point: c</code>, that is
+       a &lt;<sub>1</sub> b &lt;<sub>1</sub> c, a &lt;<sub>2</sub> b, a &lt;<sub>2</sub> c, and b and c are not related by
+       &le;<sub>2</sub>.</p>
+    <p>The point does not denote the value of the matrix. For example <code>(0,0)(1,1)</code> gives
+       <code>a b(a,a)</code>, a pair a &lt;<sub>2</sub> b, whose least realization is
+       &epsilon;<sub>0</sub>&middot;&omega; &lt;<sub>2</sub> &epsilon;<sub>0</sub>&middot;(&omega;+1), while the value of the
+       matrix is &epsilon;<sub>0</sub>. The <a href="../bms2apor/">additive version</a> aims at the value itself.</p>
+
+    <h2 id="order">Why the order is kept</h2>
+    <ol>
+      <li>A <em>stable label</em> of a matrix assigns increasing ordinals to its columns so that a
+          <var>k</var>-ancestor gets an ordinal &lt;<sub><var>k</var>+1</sub> the ordinal of the column. This is a
+          covering of the output pattern.</li>
+      <li>DH, Proposition 19.1: if a matrix <var>A</var> has a stable label <var>f</var> and <var>A</var>[<var>n</var>] is not
+          empty, then <var>A</var>[<var>n</var>] has a stable label <var>g</var> whose last value is smaller than the last
+          value of <var>f</var>. It needs finite reflection for the relations, which holds for &lt;<sub>1</sub>,
+          &lt;<sub>2</sub> in R<sub>2</sub> and for &lt;<sub>1</sub>, &lt;<sub>2</sub>, &lt;<sub>3</sub> in R<sub>3</sub>
+          (<a href="https://github.com/koteitan/bms-elem-pattern/blob/main/proof/README.md">proof</a>,
+          <a href="https://github.com/koteitan/bms-elem-pattern/blob/main/proof/TSS.md">3 rows</a>, Lean).</li>
+      <li>Wilken, <a href="https://arxiv.org/abs/1608.08421">Pure patterns of order 2</a>, Theorems 4.3, 4.4 and
+          Corollary 4.8: every respecting forest of order 2 has a unique isominimal realization, and it is pointwise
+          below every covering.</li>
+      <li>By 2 and 3, the least realization of the last node of <var>A</var>[<var>n</var>] is below the last value of
+          <var>g</var>, which is below the least realization of the last node of <var>A</var>. So every expansion
+          lowers the point.</li>
+      <li>If <var>A</var> &lt; <var>B</var> are standard, some <var>B</var>[<var>n</var>] is &ge; <var>A</var>; repeating
+          this reaches <var>A</var> from <var>B</var> by expansions. This step is only checked, not proved here (see
+          Checks).</li>
+    </ol>
+    <p>For 3 rows, steps 1, 2 and 5 still work, so the least ordinal that can label the last column keeps the order.
+       Step 3 is not known for order 3.</p>
+
+    <h2>Checks</h2>
+    <ul>
+      <li>Respecting forests (&le;<sub><var>k</var>+1</sub> &sube; &le;<sub><var>k</var></sub>, and
+          <var>p</var> &le;<sub><var>k</var></sub> <var>q</var> &le;<sub><var>k</var></sub> <var>r</var> with
+          <var>p</var> &le;<sub><var>k</var>+1</sub> <var>r</var> implies <var>p</var> &le;<sub><var>k</var>+1</sub> <var>q</var>):
+          all 44653 standard 2-row matrices with at most 8 columns and all 13628 standard 3-row matrices with at most
+          6 columns.</li>
+      <li>Step 5: all 824970 pairs of standard 2-row matrices with at most 6 columns and all 924120 pairs of standard
+          3-row matrices with at most 5 columns (expansion BM4, standardness by
+          <a href="https://github.com/koteitan/yaBMS">yaBMS</a>).</li>
+      <li>1 row: with Carlson's formula for &le;<sub>1</sub> below &epsilon;<sub>0</sub>, the columns of every standard
+          primitive sequence of length at most 9 (1204 sequences) can be placed so that the relations match exactly and
+          the points increase; for a sequence with one root, the first column is placed at the value of the sequence.</li>
+    </ul>
+
+    <h2>Input</h2>
+    <ul>
+      <li>One matrix per line; all lines are translated.</li>
+      <li>Characters other than <code>(),0-9</code> are ignored. Shorter columns are padded with 0, and rows of zeros at
+          the bottom are dropped.</li>
+      <li>The input is mirrored to the URL query <code>?bms=</code>.</li>
+    </ul>
+  </section>
+</main>
+
+<script src="bms2por.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

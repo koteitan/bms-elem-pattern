@@ -15,6 +15,8 @@
 Buchholz の $`\psi`$（$`\Omega_0 = 1`$、$`\nu \le \omega`$ の $`\psi_\nu`$）の列は、Wilken の論文には無い。
 小さい値は $`\psi`$ の定義から計算し、SVO、LVO、$`\psi_0(\Omega_n)`$、$`\psi_0(\Omega_\omega)`$ はよく知られた値を書いた。この列の計算はノートには書いていない。
 
+§1〜§3 の表は値の小さい順、§4 の表は添字の順に並べてある。
+
 ## 1. ϑ₀（τ = 1）
 
 | ϑ の項 | 値 | 別の書き方 | Buchholz の $`\psi`$ | 根拠 |
@@ -23,8 +25,8 @@ Buchholz の $`\psi`$（$`\Omega_0 = 1`$、$`\nu \le \omega`$ の $`\psi_\nu`$�
 | $`\vartheta_0(1)`$ | $`\omega`$ | $`\varphi(0, 1)`$ | $`\psi_0(1)`$ | W |
 | $`\vartheta_0(2)`$ | $`\omega^2`$ | | $`\psi_0(2)`$ | 計算 §2 |
 | $`\vartheta_0(\omega)`$ | $`\omega^\omega`$ | | $`\psi_0(\omega)`$ | 計算 §2 |
-| $`\vartheta_0(\varepsilon_0)`$ | $`\varepsilon_0 \cdot \omega`$ | $`\omega^{\varepsilon_0+1}`$ | $`\psi_0(\Omega + 1)`$ | W |
 | $`\vartheta_0(\Omega)`$ | $`\varepsilon_0`$ | $`\varphi(1, 0)`$ | $`\psi_0(\Omega)`$ | W |
+| $`\vartheta_0(\varepsilon_0)`$ | $`\varepsilon_0 \cdot \omega`$ | $`\omega^{\varepsilon_0+1}`$ | $`\psi_0(\Omega + 1)`$ | W |
 | $`\vartheta_0(\Omega + 1)`$ | $`\varepsilon_1`$ | $`\varphi(1, 1)`$ | $`\psi_0(\Omega \cdot 2)`$ | 計算 §4.2 |
 | $`\vartheta_0(\Omega + \varepsilon_0)`$ | $`\varepsilon_{\varepsilon_0}`$ | $`\varphi(1, \varepsilon_0)`$ | $`\psi_0(\Omega \cdot \varepsilon_0)`$ | W |
 | $`\vartheta_0(\Omega \cdot 2)`$ | $`\zeta_0`$ | $`\varphi(2, 0)`$ | $`\psi_0(\Omega^2)`$ | W |
@@ -58,8 +60,8 @@ SVO は小 Veblen 順序数、LVO は大 Veblen 順序数、BHO は Bachmann–H
 | $`\vartheta_1(\vartheta_1(0))`$ | $`\Omega^2`$ | W |
 | $`\vartheta_1(\vartheta_1(1))`$ | $`\Omega^\omega`$ | 計算 §3 |
 | $`\vartheta_1(\vartheta_1(\vartheta_1(0)))`$ | $`\Omega^\Omega`$ | 計算 §3 |
-| $`\vartheta_2(0)`$ | $`\Omega_2`$ | W |
 | $`\vartheta_1(\vartheta_2(0))`$ | $`\varepsilon_{\Omega+1}`$ | W |
+| $`\vartheta_2(0)`$ | $`\Omega_2`$ | W |
 
 ## 3. 相対化した ϑ^τ
 

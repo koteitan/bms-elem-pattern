@@ -52,6 +52,8 @@ $`\xi = \varepsilon_0`$ のとき：$`\omega^0, \omega^1, \dots`$ と数える�
 
 (2) から $`\vartheta_1(0) = \Omega`$、$`\alpha \lt \Omega_2`$ について $`\vartheta_1(1 + \alpha) = \bar\omega^{\Omega+\alpha}`$、$`\vartheta_2(0) = \Omega_2`$ である。
 
+次の表は、値の順ではなく、引数の順に並べてある。
+
 | 項 | 計算 | 値 |
 |---|---|---|
 | $`\vartheta_1(0)`$ | $`\Omega_1`$ | $`\Omega`$ |

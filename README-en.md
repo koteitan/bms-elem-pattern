@@ -9,6 +9,7 @@ The proof was first given for the pair sequence system with R2 (up to Σ₂), an
 - Overview of the pair sequence proof: [proof/pss/README-en.md](proof/pss/README-en.md)
 - Extension to trio sequences: [proof/tss/README-en.md](proof/tss/README-en.md)
 - Extension to every number of rows: [proof/bms/README-en.md](proof/bms/README-en.md)
+- Notes on Wilken's ordinal notation ϑᵢ and υ, not used in the proof (in Japanese): [wilken/README.md](wilken/README.md)
 - Lean sources: [lean/](lean/)
 
 ## References

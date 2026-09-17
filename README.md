@@ -9,6 +9,7 @@
 - ペア数列の証明の概要：[proof/pss/README.md](proof/pss/README.md)
 - トリオ数列への拡張：[proof/tss/README.md](proof/tss/README.md)
 - すべての行数への拡張：[proof/bms/README.md](proof/bms/README.md)
+- Wilken の順序数表記 ϑᵢ、υ の解説（証明には使わない）：[wilken/README.md](wilken/README.md)
 - Lean のソース：[lean/](lean/)
 
 ## 参考文献

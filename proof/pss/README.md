@@ -1,11 +1,11 @@
-[← Back](../README.md) | [English](README-en.md) | [Japanese](README.md)
+[← Back](../../README.md) | [English](README-en.md) | [Japanese](README.md)
 
 # Σ₂ 初等部分構造によるペア数列システムの停止性の証明
 
 ペア数列の展開がいつか必ず止まることを、Carlson の構造 $`\mathcal{R}_2`$ の関係をラベルに使って Lean 4 で証明した。
 ラベルの関係の定義には、構成可能階層も許容順序数も使っていない。
 
-3 行（トリオ数列）への拡張は [TSS.md](TSS.md) にある。Lean のコードは 1〜3 行をまとめて扱う。
+3 行（トリオ数列）への拡張は [tss](../tss/README.md)、すべての行数への拡張は [bms](../bms/README.md) にある。Lean のコードはすべての行数をまとめて扱う。
 
 ## 数学の説明
 
@@ -217,8 +217,8 @@ $`\lt_2`$ 鎖があることは、$`\omega_1`$ の中の閉包で示す。
 - **他の版のペア数列との一致**：扱うのは BM4 の 2 行版だけである
 - **3 行以上**
   - 3 行では (d) に $`m = 1`$ の条件 $`y_i \lt_2 \beta \Rightarrow y'_i \lt_2 \alpha`$ が加わる
-  - $`\mathcal{R}_3`$ を使うと示せる。[TSS.md](TSS.md) にある
-  - 4 行以上は扱っていない
+  - $`\mathcal{R}_3`$ を使うと示せる。[tss](../tss/README.md) にある
+  - すべての行数は $`\mathcal{R}_r`$ を使って示せる。[bms](../bms/README.md) にある
 
 ## 8. Lean との対応
 
@@ -226,35 +226,37 @@ Lean では $`\mathcal{R}_N`$ を一般の $`N`$ で定義している。ペア�
 
 | 数学 | Lean | ファイル |
 |---|---|---|
-| $`\le_1`$、$`\le_2`$ の定義 | `RFix`, `RN`, `lev`, `lev_iff` | [`Basic.lean`](../lean/Pattern/Basic.lean) |
+| $`\le_1`$、$`\le_2`$ の定義 | `RFix`, `RN`, `lev`, `lev_iff` | [`Basic.lean`](../../lean/Pattern/Basic.lean) |
 | $`\lt_1`$、$`\lt_2`$ | `lab` | 同上 |
 | 論理式、原子図式 | `Sig`, `diag`, `Elem` | 同上 |
 | 推移律、$`\le_2 \Rightarrow \le_1`$ | `lev_trans`, `lev_mono` | 同上 |
 | $`a \le b \le c \wedge a \le_1 c \Rightarrow a \le_1 b`$ | `lev0_of_le` | 同上 |
 | 連続性 | `lev0_of_forall` | 同上 |
 | $`\alpha \lt_1 \beta`$ なら後続で閉じる | `succ_lt_of_lab0` | 同上 |
-| 有限反映 $`n = 0`$ | `reflect_zero` | [`Reflect.lean`](../lean/Pattern/Reflect.lean) |
+| 有限反映 $`n = 0`$ | `reflect_zero` | [`Reflect.lean`](../../lean/Pattern/Reflect.lean) |
 | 有限反映 $`n = 1`$ | `reflect_one` | 同上 |
-| ラベルの体系 | `labelSystem` | 同上 |
-| $`\mathrm{next}`$、$`\lambda`$ | `next`, `lam` | [`Chain.lean`](../lean/Pattern/Chain.lean) |
+| ラベルの体系（3 行まで） | `labelSystem` | 同上 |
+| ラベルの体系（すべての行数） | `labelSystemGen` | [`General.lean`](../../lean/Pattern/General.lean) |
+| $`\mathrm{next}`$、$`\lambda`$ | `next`, `lam` | [`Chain.lean`](../../lean/Pattern/Chain.lean) |
 | $`\lambda(\gamma)`$ と $`\omega_1`$ の一致 | `lam_elem` | 同上 |
 | $`\lambda(\gamma) \lt_2 \lambda(\delta)`$ | `lab_lam` | 同上 |
 | 鎖の存在 | `exists_chain` | 同上 |
-| $`S_n`$、ペア数列 | `stair`, `Std` | [`Main.lean`](../lean/Pattern/Main.lean) |
+| $`S_n`$、ペア数列 | `stair`, `Std` | [`Main.lean`](../../lean/Pattern/Main.lean) |
 | $`S_n`$ のラベル | `stable_stair` | 同上 |
 | 空でないペア数列のラベル | `std_stable` | 同上 |
 | 停止性 | `pss_terminates`（一般形 `terminates`） | 同上 |
 | 整礎性 | `StdR_wf` | 同上 |
-| 命題 19.1 | `descent` | [`Bm4/Label.lean`](../lean/Bm4/Label.lean) |
+| 命題 19.1 | `descent` | [`Bm4/Label.lean`](../../lean/Bm4/Label.lean) |
 
 ## 9. ファイル
 
 | ファイル | 行数 | 内容 |
 |---|---:|---|
-| [`lean/Pattern/Basic.lean`](../lean/Pattern/Basic.lean) | 454 | $`\mathcal{R}_N`$ の定義と基本性質 |
-| [`lean/Pattern/Reflect.lean`](../lean/Pattern/Reflect.lean) | 329 | 有限反映（$`n = 0, 1, 2`$）、ラベルの体系 |
-| [`lean/Pattern/Chain.lean`](../lean/Pattern/Chain.lean) | 209 | すべての段で結ばれた鎖の存在 |
-| [`lean/Pattern/Main.lean`](../lean/Pattern/Main.lean) | 111 | 標準列の定義、1〜3 行の停止性、整礎性 |
+| [`lean/Pattern/Basic.lean`](../../lean/Pattern/Basic.lean) | 454 | $`\mathcal{R}_N`$ の定義と基本性質 |
+| [`lean/Pattern/Reflect.lean`](../../lean/Pattern/Reflect.lean) | 329 | 有限反映（$`n = 0, 1, 2`$）、ラベルの体系 |
+| [`lean/Pattern/Chain.lean`](../../lean/Pattern/Chain.lean) | 209 | すべての段で結ばれた鎖の存在 |
+| [`lean/Pattern/General.lean`](../../lean/Pattern/General.lean) | 639 | すべての段の有限反映（[bms](../bms/README.md)） |
+| [`lean/Pattern/Main.lean`](../../lean/Pattern/Main.lean) | 111 | 標準列の定義、すべての行数の停止性、整礎性 |
 | `lean/Bm4/` | 2,923 | BM4 の組合せ部分（配列、展開、コピー補題、命題 19.1） |
 
 `lean/Bm4/` は [koteitan/dh-bms-wf-formal](https://github.com/koteitan/dh-bms-wf-formal) の `lean/Bm4/` から、組合せ部分だけをコピーした。
@@ -263,7 +265,7 @@ Lean では $`\mathcal{R}_N`$ を一般の $`N`$ で定義している。ペア�
 - 行数 $`r`$ を界面の引数にし、有限反映は $`n \lt r`$ の場合だけを要求する
 - 使われていない単調性の条件と、初期列 $`E_r`$ のためだけの初期対の条件を外した
 
-4 行以上では有限反映を示していないので、行数を固定した界面にした。
+要る有限反映の段 $`n \lt r`$ は行数で決まるので、行数を界面の引数にした。
 
 ## 10. ビルド
 

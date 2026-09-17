@@ -101,10 +101,10 @@ An ordinal that is the order type of a computable well-order is called a **recur
 |---|---|---|
 | Ordinals | `Ordinal.{0}` | Mathlib |
 | $`z + 1`$ | `Order.succ z` | Mathlib |
-| Upper bound for finitely many ordinals | `exists_bound` | [`Pattern/Basic.lean`](../../lean/Pattern/Basic.lean) |
-| $`\omega_1`$ | `Om` | [`Pattern/Chain.lean`](../../lean/Pattern/Chain.lean) |
+| Upper bound for finitely many ordinals | `exists_bound` | [`Pattern/Basic.lean`](../../../lean/Pattern/Basic.lean) |
+| $`\omega_1`$ | `Om` | [`Pattern/Chain.lean`](../../../lean/Pattern/Chain.lean) |
 | Fact 1 | `countable_Iio` | same |
 | Fact 2 | `om_succ_lt` | same |
 | Fact 3 | `Ordinal.iSup_lt_omega_one` | Mathlib |
-| Fact 4 | `enumBelow`, `enumBelow_surj` | [`Pattern/Chain.lean`](../../lean/Pattern/Chain.lean) |
+| Fact 4 | `enumBelow`, `enumBelow_surj` | [`Pattern/Chain.lean`](../../../lean/Pattern/Chain.lean) |
 | No infinite descending sequence | `WellFounded.has_min` | Mathlib |

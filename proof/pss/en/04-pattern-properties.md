@@ -66,7 +66,7 @@ $`\square`$
 
 $`\square`$
 
-**Why the same argument fails at level 3.** For a $`\Sigma_3`$ formula $`\exists \vec x\ \forall \vec z\ \exists \vec w\ \psi`$, the first direction needs "$`\forall \vec z\ \exists \vec w\ \psi`$ true in $`\alpha`$ is also true in $`v`$". But for $`\vec z \lt v`$ the witness $`\vec w`$ may lie at or above $`v`$, so it cannot be brought down to $`v`$.
+**Why the same argument fails at level 3.** For a $`\Sigma_3`$ formula $`\exists \vec x\ \forall \vec z\ \exists \vec w\ \psi`$, the first direction needs "$`\forall \vec z\ \exists \vec w\ \psi`$ true in $`\alpha`$ is also true in $`v`$". But for $`\vec z \lt v`$ the witness $`\vec w`$ may lie at or above $`v`$, so it cannot be brought down to $`v`$. Adding the condition $`v \le_{j-2} \alpha`$ for the elements of $`S`$ makes it hold at every level (P4′ of [bms 01](../../bms/en/01-cofinal-continuity.md)).
 
 ## P5: the lower end of <₁ is closed under successor
 
@@ -113,7 +113,7 @@ The level index in Lean is shifted by one (`lev N 0` is $`\le_1`$).
 
 | Property | Lean | File |
 |---|---|---|
-| P1 | `lev0_of_le` | [`Pattern/Basic.lean`](../../lean/Pattern/Basic.lean) |
+| P1 | `lev0_of_le` | [`Pattern/Basic.lean`](../../../lean/Pattern/Basic.lean) |
 | P2 | `lev1_of_lev0` | same |
 | P3 | `lev0_of_forall` | same |
 | P4 | `elem_cofinal` | same |

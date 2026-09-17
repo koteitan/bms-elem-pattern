@@ -66,7 +66,7 @@ $`\square`$
 
 $`\square`$
 
-**なぜ段 3 では同じ議論ができないか.** $`\Sigma_3`$ 論理式 $`\exists \vec x\ \forall \vec z\ \exists \vec w\ \psi`$ では、1 つめの向きで「$`\alpha`$ で真な $`\forall \vec z\ \exists \vec w\ \psi`$ が $`v`$ でも真」が要る。しかし $`\vec z \lt v`$ に対する証人 $`\vec w`$ が $`v`$ 以上にあるかもしれず、$`v`$ へ下ろせない。
+**なぜ段 3 では同じ議論ができないか.** $`\Sigma_3`$ 論理式 $`\exists \vec x\ \forall \vec z\ \exists \vec w\ \psi`$ では、1 つめの向きで「$`\alpha`$ で真な $`\forall \vec z\ \exists \vec w\ \psi`$ が $`v`$ でも真」が要る。しかし $`\vec z \lt v`$ に対する証人 $`\vec w`$ が $`v`$ 以上にあるかもしれず、$`v`$ へ下ろせない。$`S`$ の元に条件 $`v \le_{j-2} \alpha`$ を足すと、どの段でも成り立つ（[bms 01](../bms/01-cofinal-continuity.md) の P4′）。
 
 ## P5：<₁ の下端は後続で閉じる
 
@@ -115,7 +115,7 @@ Lean の段の番号は 1 つずれている（`lev N 0` が $`\le_1`$）。
 
 | 性質 | Lean | ファイル |
 |---|---|---|
-| P1 | `lev0_of_le` | [`Pattern/Basic.lean`](../lean/Pattern/Basic.lean) |
+| P1 | `lev0_of_le` | [`Pattern/Basic.lean`](../../lean/Pattern/Basic.lean) |
 | P2 | `lev1_of_lev0` | 同上 |
 | P3 | `lev0_of_forall` | 同上 |
 | P4 | `elem_cofinal` | 同上 |

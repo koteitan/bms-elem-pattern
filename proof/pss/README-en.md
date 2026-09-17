@@ -1,11 +1,11 @@
-[← Back](../README-en.md) | [English](README-en.md) | [Japanese](README.md)
+[← Back](../../README-en.md) | [English](README-en.md) | [Japanese](README.md)
 
 # Termination Proof of the Pair Sequence System via Σ₂-Elementary Substructures
 
 We prove in Lean 4 that every expansion of a pair sequence eventually terminates, using the relations of Carlson's structure $`\mathcal{R}_2`$ as the label relations.
 The definition of the label relations uses neither the constructible hierarchy nor admissible ordinals.
 
-The extension to 3 rows (trio sequences) is in [en/TSS.md](en/TSS.md). The Lean code treats 1 to 3 rows together.
+The extension to 3 rows (trio sequences) is in [tss](../tss/README-en.md), and the extension to every number of rows is in [bms](../bms/README-en.md). The Lean code treats every number of rows together.
 
 ## Mathematical background
 
@@ -215,8 +215,8 @@ This was proved in dh-bms-wf-formal assuming finite reflection, and we use it as
 - **Agreement with other versions of pair sequences**: only the 2-row version of BM4 is treated
 - **3 or more rows**
   - With 3 rows, (d) gains the condition $`y_i \lt_2 \beta \Rightarrow y'_i \lt_2 \alpha`$ for $`m = 1`$
-  - It can be shown using $`\mathcal{R}_3`$; see [en/TSS.md](en/TSS.md)
-  - 4 or more rows are not treated
+  - It can be shown using $`\mathcal{R}_3`$; see [tss](../tss/README-en.md)
+  - Every number of rows can be shown using $`\mathcal{R}_r`$; see [bms](../bms/README-en.md)
 
 ## 8. Correspondence with Lean
 
@@ -224,35 +224,37 @@ In Lean, $`\mathcal{R}_N`$ is defined for general $`N`$. Pair sequences are the 
 
 | Mathematics | Lean | File |
 |---|---|---|
-| Definition of $`\le_1`$, $`\le_2`$ | `RFix`, `RN`, `lev`, `lev_iff` | [`Basic.lean`](../lean/Pattern/Basic.lean) |
+| Definition of $`\le_1`$, $`\le_2`$ | `RFix`, `RN`, `lev`, `lev_iff` | [`Basic.lean`](../../lean/Pattern/Basic.lean) |
 | $`\lt_1`$, $`\lt_2`$ | `lab` | same |
 | Formulas, atomic diagrams | `Sig`, `diag`, `Elem` | same |
 | Transitivity, $`\le_2 \Rightarrow \le_1`$ | `lev_trans`, `lev_mono` | same |
 | $`a \le b \le c \wedge a \le_1 c \Rightarrow a \le_1 b`$ | `lev0_of_le` | same |
 | Continuity | `lev0_of_forall` | same |
 | $`\alpha \lt_1 \beta`$ implies closure under successor | `succ_lt_of_lab0` | same |
-| Finite reflection $`n = 0`$ | `reflect_zero` | [`Reflect.lean`](../lean/Pattern/Reflect.lean) |
+| Finite reflection $`n = 0`$ | `reflect_zero` | [`Reflect.lean`](../../lean/Pattern/Reflect.lean) |
 | Finite reflection $`n = 1`$ | `reflect_one` | same |
-| Label system | `labelSystem` | same |
-| $`\mathrm{next}`$, $`\lambda`$ | `next`, `lam` | [`Chain.lean`](../lean/Pattern/Chain.lean) |
+| Label system (up to 3 rows) | `labelSystem` | same |
+| Label system (every number of rows) | `labelSystemGen` | [`General.lean`](../../lean/Pattern/General.lean) |
+| $`\mathrm{next}`$, $`\lambda`$ | `next`, `lam` | [`Chain.lean`](../../lean/Pattern/Chain.lean) |
 | Agreement of $`\lambda(\gamma)`$ and $`\omega_1`$ | `lam_elem` | same |
 | $`\lambda(\gamma) \lt_2 \lambda(\delta)`$ | `lab_lam` | same |
 | Existence of chains | `exists_chain` | same |
-| $`S_n`$, pair sequences | `stair`, `Std` | [`Main.lean`](../lean/Pattern/Main.lean) |
+| $`S_n`$, pair sequences | `stair`, `Std` | [`Main.lean`](../../lean/Pattern/Main.lean) |
 | Labels of $`S_n`$ | `stable_stair` | same |
 | Labels of nonempty pair sequences | `std_stable` | same |
 | Termination | `pss_terminates` (general form `terminates`) | same |
 | Well-foundedness | `StdR_wf` | same |
-| Proposition 19.1 | `descent` | [`Bm4/Label.lean`](../lean/Bm4/Label.lean) |
+| Proposition 19.1 | `descent` | [`Bm4/Label.lean`](../../lean/Bm4/Label.lean) |
 
 ## 9. Files
 
 | File | Lines | Contents |
 |---|---:|---|
-| [`lean/Pattern/Basic.lean`](../lean/Pattern/Basic.lean) | 454 | Definition and basic properties of $`\mathcal{R}_N`$ |
-| [`lean/Pattern/Reflect.lean`](../lean/Pattern/Reflect.lean) | 329 | Finite reflection ($`n = 0, 1, 2`$), label system |
-| [`lean/Pattern/Chain.lean`](../lean/Pattern/Chain.lean) | 209 | Existence of chains related at every level |
-| [`lean/Pattern/Main.lean`](../lean/Pattern/Main.lean) | 111 | Definition of standard arrays, termination and well-foundedness for 1–3 rows |
+| [`lean/Pattern/Basic.lean`](../../lean/Pattern/Basic.lean) | 454 | Definition and basic properties of $`\mathcal{R}_N`$ |
+| [`lean/Pattern/Reflect.lean`](../../lean/Pattern/Reflect.lean) | 329 | Finite reflection ($`n = 0, 1, 2`$), label system |
+| [`lean/Pattern/Chain.lean`](../../lean/Pattern/Chain.lean) | 209 | Existence of chains related at every level |
+| [`lean/Pattern/General.lean`](../../lean/Pattern/General.lean) | 639 | Finite reflection at every level ([bms](../bms/README-en.md)) |
+| [`lean/Pattern/Main.lean`](../../lean/Pattern/Main.lean) | 111 | Definition of standard arrays, termination and well-foundedness for every number of rows |
 | `lean/Bm4/` | 2,923 | Combinatorics of BM4 (arrays, expansion, copy lemmas, Proposition 19.1) |
 
 `lean/Bm4/` copies only the combinatorial part of `lean/Bm4/` in [koteitan/dh-bms-wf-formal](https://github.com/koteitan/dh-bms-wf-formal).
@@ -261,7 +263,7 @@ The only change is the label interface in `Label.lean`.
 - The number of rows $`r`$ is a parameter of the interface, and finite reflection is required only for $`n \lt r`$
 - The unused monotonicity condition and the initial-pair condition, used only for the initial array $`E_r`$, are removed
 
-Since finite reflection is not shown for 4 or more rows, the interface fixes the number of rows.
+The levels $`n \lt r`$ of finite reflection that are needed depend on the number of rows, so the number of rows is a parameter of the interface.
 
 ## 10. Build
 

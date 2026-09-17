@@ -122,12 +122,12 @@ Finite reflection is only invoked with $`n = m_0 \lt r`$.
 
 | Concept | Lean | File |
 |---|---|---|
-| Arrays | `Arr` | [`Bm4/Defs.lean`](../../lean/Bm4/Defs.lean) |
+| Arrays | `Arr` | [`Bm4/Defs.lean`](../../../lean/Bm4/Defs.lean) |
 | Candidates, parents | `cand`, `parentRel`, `parent` | same |
 | Ancestors | `anc`, `ancEq` | same |
 | Existence of a parent, $`m_0`$, $`p`$ | `LastHasParent`, `m₀`, `badRoot` | same |
 | Expansion, expansion sequences | `dropLast`, `tildeCol`, `expand`, `seq` | same |
-| Label systems | `LabelSystem` | [`Bm4/Label.lean`](../../lean/Bm4/Label.lean) |
+| Label systems | `LabelSystem` | [`Bm4/Label.lean`](../../../lean/Bm4/Label.lean) |
 | Stable labels, height | `Stable`, `ht` | same |
 | Proposition 19.1 | `descent` | same |
-| $`S^r_n`$, standard arrays | `stair`, `Std` | [`Pattern/Main.lean`](../../lean/Pattern/Main.lean) |
+| $`S^r_n`$, standard arrays | `stair`, `Std` | [`Pattern/Main.lean`](../../../lean/Pattern/Main.lean) |

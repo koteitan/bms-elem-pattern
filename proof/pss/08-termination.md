@@ -11,6 +11,8 @@ $`r \le 3`$ とする。$`\mathrm{Lab}`$ を順序数全体とし、$`\mathcal{R
 - 狭義、推移：[03](03-patterns.md) §3
 - 有限反映：[06](06-finite-reflection.md)
 
+すべての行数 $`r`$ の場合は [bms](../bms/README.md) にある。Lean の `terminates` は行数の制限なしで証明してあり、ラベルの体系にはすべての行数で使える `labelSystemGen` を使う。
+
 したがってこれは行数 $`r`$ のラベルの体系（[05](05-arrays-labels.md) §5）である。
 
 ## 2. 初期列のラベル
@@ -77,8 +79,9 @@ A \mathrel{R} B \iff B \ne \emptyset \wedge \exists n\ \bigl(A = B[n]\bigr)
 
 | 概念 | Lean | ファイル |
 |---|---|---|
-| ラベルの体系 | `labelSystem` | [`Pattern/Reflect.lean`](../lean/Pattern/Reflect.lean) |
-| §2 | `stable_stair` | [`Pattern/Main.lean`](../lean/Pattern/Main.lean) |
+| ラベルの体系 | `labelSystem`（3 行まで） | [`Pattern/Reflect.lean`](../../lean/Pattern/Reflect.lean) |
+| ラベルの体系 | `labelSystemGen`（すべての行数） | [`Pattern/General.lean`](../../lean/Pattern/General.lean) |
+| §2 | `stable_stair` | [`Pattern/Main.lean`](../../lean/Pattern/Main.lean) |
 | §3 | `std_stable` | 同上 |
 | §4 | `terminates`, `pss_terminates`, `tss_terminates` | 同上 |
 | §5 | `StdElt`, `StdR`, `StdR_wf` | 同上 |

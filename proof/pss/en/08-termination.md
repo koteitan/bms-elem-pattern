@@ -11,6 +11,8 @@ Let $`r \le 3`$. Let $`\mathrm{Lab}`$ be the class of ordinals, and put $`\lhd_k
 - Strict and transitive: [03](03-patterns.md) §3
 - Finite reflection: [06](06-finite-reflection.md)
 
+The case of every number of rows $`r`$ is in [bms](../../bms/README-en.md). Lean's `terminates` is proved without a bound on the number of rows, using `labelSystemGen`, which works for every number of rows.
+
 Hence this is a label system with $`r`$ rows ([05](05-arrays-labels.md) §5).
 
 ## 2. Labels of the initial arrays
@@ -77,8 +79,9 @@ can be shown by induction on $`\mathrm{ht}(f)`$ for stable labels $`f`$: the lab
 
 | Concept | Lean | File |
 |---|---|---|
-| Label system | `labelSystem` | [`Pattern/Reflect.lean`](../../lean/Pattern/Reflect.lean) |
-| §2 | `stable_stair` | [`Pattern/Main.lean`](../../lean/Pattern/Main.lean) |
+| Label system | `labelSystem` (up to 3 rows) | [`Pattern/Reflect.lean`](../../../lean/Pattern/Reflect.lean) |
+| Label system | `labelSystemGen` (every number of rows) | [`Pattern/General.lean`](../../../lean/Pattern/General.lean) |
+| §2 | `stable_stair` | [`Pattern/Main.lean`](../../../lean/Pattern/Main.lean) |
 | §3 | `std_stable` | same |
 | §4 | `terminates`, `pss_terminates`, `tss_terminates` | same |
 | §5 | `StdElt`, `StdR`, `StdR_wf` | same |

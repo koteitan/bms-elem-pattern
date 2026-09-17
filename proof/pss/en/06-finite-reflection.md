@@ -109,7 +109,7 @@ Wilken (Lemma 4.2 of arXiv version v1) shows, by the same P2- and P7-type argume
 
 ## 6. Why the same method does not work for 4 rows
 
-For $`n = 3`$, (d) gains the condition $`y_i \lt_3 \beta \Rightarrow y'_i \lt_3 \alpha`$ for $`m = 2`$. Building a formula of the same form as in §5 would require P2, P4, P6 and P7 one level higher. Of these, P4 does not hold for $`\Sigma_3`$ as it is, as seen in [04](04-pattern-properties.md). 4 or more rows are not treated.
+For $`n = 3`$, (d) gains the condition $`y_i \lt_3 \beta \Rightarrow y'_i \lt_3 \alpha`$ for $`m = 2`$. Building a formula of the same form as in §5 would require P2, P4, P6 and P7 one level higher. Of these, P4 does not hold for $`\Sigma_3`$ as it is, as seen in [04](04-pattern-properties.md). 4 or more rows are shown by a different proof that uses P4′, which is P4 with an extra condition, and the formulas $`\Phi_m`$ ([bms 05](../../bms/en/05-finite-reflection.md)).
 
 ## 7. How it is used in the proof
 
@@ -121,7 +121,7 @@ For $`n = 3`$, (d) gains the condition $`y_i \lt_3 \beta \Rightarrow y'_i \lt_3 
 
 | Concept | Lean | File |
 |---|---|---|
-| Turning $`X`$ into a sequence | `listTuple`, `listTuple_lt`, `mem_listTuple` | [`Pattern/Reflect.lean`](../../lean/Pattern/Reflect.lean) |
+| Turning $`X`$ into a sequence | `listTuple`, `listTuple_lt`, `mem_listTuple` | [`Pattern/Reflect.lean`](../../../lean/Pattern/Reflect.lean) |
 | Same atomic diagram | `SameBits`, `Agree`, `agree_iff`, `lab_transfer` | same |
 | Lemma of §2 | `copy_props` | same |
 | §3 | `reflect_zero` | same |

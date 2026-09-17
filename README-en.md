@@ -1,13 +1,14 @@
 [English](README-en.md) | [Japanese](README.md)
 
-# Termination Proof of the Pair Sequence System via Σ₂-Elementary Substructures
+# Termination Proof of the Bashicu Matrix System via Σₙ-Elementary Substructures
 
-We prove in Lean 4 that every expansion of the pair sequence system eventually terminates.
-The labels are related by Carlson's structure R2 (the relations of Σ₁- and Σ₂-elementary substructure between ordinals).
-Using R3 (up to Σ₃), the proof is extended to the trio sequence system.
+We prove in Lean 4 that every expansion of the Bashicu matrix system (BM4) eventually terminates, for every number of rows.
+The labels are related by Carlson's structure R_N (the relations of Σ₁-, …, Σ_N-elementary substructure between ordinals).
+The proof was first given for the pair sequence system with R2 (up to Σ₂), and then extended to the trio sequence system (R3) and to every number of rows (R_N).
 
-- Overview of the pair sequence proof: [proof/README-en.md](proof/README-en.md)
-- Extension to trio sequences: [proof/en/TSS.md](proof/en/TSS.md)
+- Overview of the pair sequence proof: [proof/pss/README-en.md](proof/pss/README-en.md)
+- Extension to trio sequences: [proof/tss/README-en.md](proof/tss/README-en.md)
+- Extension to every number of rows: [proof/bms/README-en.md](proof/bms/README-en.md)
 - Lean sources: [lean/](lean/)
 
 ## References

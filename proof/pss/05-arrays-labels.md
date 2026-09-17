@@ -122,12 +122,12 @@ S^r_n = \underbrace{(0,\dots,0)}_{r}\,\underbrace{(1,\dots,1)}_{r} \cdots \under
 
 | 概念 | Lean | ファイル |
 |---|---|---|
-| 配列 | `Arr` | [`Bm4/Defs.lean`](../lean/Bm4/Defs.lean) |
+| 配列 | `Arr` | [`Bm4/Defs.lean`](../../lean/Bm4/Defs.lean) |
 | 候補、親 | `cand`, `parentRel`, `parent` | 同上 |
 | 祖先 | `anc`, `ancEq` | 同上 |
 | 親の有無、$`m_0`$、$`p`$ | `LastHasParent`, `m₀`, `badRoot` | 同上 |
 | 展開、展開列 | `dropLast`, `tildeCol`, `expand`, `seq` | 同上 |
-| ラベルの体系 | `LabelSystem` | [`Bm4/Label.lean`](../lean/Bm4/Label.lean) |
+| ラベルの体系 | `LabelSystem` | [`Bm4/Label.lean`](../../lean/Bm4/Label.lean) |
 | 安定ラベル、高さ | `Stable`, `ht` | 同上 |
 | 命題 19.1 | `descent` | 同上 |
-| $`S^r_n`$、標準列 | `stair`, `Std` | [`Pattern/Main.lean`](../lean/Pattern/Main.lean) |
+| $`S^r_n`$、標準列 | `stair`, `Std` | [`Pattern/Main.lean`](../../lean/Pattern/Main.lean) |

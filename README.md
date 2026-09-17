@@ -1,13 +1,14 @@
 [English](README-en.md) | [Japanese](README.md)
 
-# Σ₂ 初等部分構造によるペア数列システムの停止性の証明
+# Σₙ 初等部分構造によるバシク行列システムの停止性の証明
 
-ペア数列システムの展開がいつか必ず止まることを、Lean 4 で証明した。
-ラベルの関係には、Carlson の構造 R2（順序数の Σ₁・Σ₂ 初等部分構造の関係）を使う。
-R3（Σ₃ まで）を使って、トリオ数列システムにも広げた。
+バシク行列システム（BM4）の展開がいつか必ず止まることを、すべての行数について Lean 4 で証明した。
+ラベルの関係には、Carlson の構造 R_N（順序数の Σ₁, …, Σ_N 初等部分構造の関係）を使う。
+はじめにペア数列システムを R2（Σ₂ まで）で証明し、トリオ数列システム（R3）、すべての行数（R_N）へ広げた。
 
-- ペア数列の証明の概要：[proof/README.md](proof/README.md)
-- トリオ数列への拡張：[proof/TSS.md](proof/TSS.md)
+- ペア数列の証明の概要：[proof/pss/README.md](proof/pss/README.md)
+- トリオ数列への拡張：[proof/tss/README.md](proof/tss/README.md)
+- すべての行数への拡張：[proof/bms/README.md](proof/bms/README.md)
 - Lean のソース：[lean/](lean/)
 
 ## 参考文献

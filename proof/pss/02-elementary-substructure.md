@@ -182,7 +182,7 @@ $`\neg \exists = \forall \neg`$ なので、これは $`\exists \vec x_1\ \foral
 
 | 概念 | Lean | ファイル |
 |---|---|---|
-| 原子図式 | `Diag`, `diag`, `bits` | [`Pattern/Basic.lean`](../lean/Pattern/Basic.lean) |
+| 原子図式 | `Diag`, `diag`, `bits` | [`Pattern/Basic.lean`](../../lean/Pattern/Basic.lean) |
 | 列の連結 $`v\,\vec x`$ | `cat` | 同上 |
 | ブロックによる評価 | `Sig`, `sig_nil`, `sig_cons` | 同上 |
 | $`\mathrm{Elem}_j`$ | `Elem` | 同上 |

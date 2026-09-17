@@ -101,10 +101,10 @@ $`\alpha`$ が後続で閉じるなら $`z + 1 \lt \alpha`$ なので、$`\alpha
 |---|---|---|
 | 順序数 | `Ordinal.{0}` | Mathlib |
 | $`z + 1`$ | `Order.succ z` | Mathlib |
-| 有限個の順序数の上界 | `exists_bound` | [`Pattern/Basic.lean`](../lean/Pattern/Basic.lean) |
-| $`\omega_1`$ | `Om` | [`Pattern/Chain.lean`](../lean/Pattern/Chain.lean) |
+| 有限個の順序数の上界 | `exists_bound` | [`Pattern/Basic.lean`](../../lean/Pattern/Basic.lean) |
+| $`\omega_1`$ | `Om` | [`Pattern/Chain.lean`](../../lean/Pattern/Chain.lean) |
 | 事実 1 | `countable_Iio` | 同上 |
 | 事実 2 | `om_succ_lt` | 同上 |
 | 事実 3 | `Ordinal.iSup_lt_omega_one` | Mathlib |
-| 事実 4 | `enumBelow`, `enumBelow_surj` | [`Pattern/Chain.lean`](../lean/Pattern/Chain.lean) |
+| 事実 4 | `enumBelow`, `enumBelow_surj` | [`Pattern/Chain.lean`](../../lean/Pattern/Chain.lean) |
 | 無限降下列は無い | `WellFounded.has_min` | Mathlib |

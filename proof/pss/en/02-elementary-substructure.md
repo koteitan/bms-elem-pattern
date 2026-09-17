@@ -182,7 +182,7 @@ Since $`\neg \exists = \forall \neg`$, this is a $`\Sigma_r`$ formula of the for
 
 | Concept | Lean | File |
 |---|---|---|
-| Atomic diagrams | `Diag`, `diag`, `bits` | [`Pattern/Basic.lean`](../../lean/Pattern/Basic.lean) |
+| Atomic diagrams | `Diag`, `diag`, `bits` | [`Pattern/Basic.lean`](../../../lean/Pattern/Basic.lean) |
 | Concatenation $`v\,\vec x`$ | `cat` | same |
 | Evaluation by blocks | `Sig`, `sig_nil`, `sig_cons` | same |
 | $`\mathrm{Elem}_j`$ | `Elem` | same |

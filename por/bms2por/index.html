@@ -8,7 +8,7 @@
 </head>
 <body>
 <header>
-  <h1>Translation of BMS to pure patterns of resemblance <span class="version">v0.1.2</span></h1>
+  <h1>Translation of BMS to pure patterns of resemblance <span class="version">v0.1.3</span></h1>
   <div class="menu">
     <button id="menu-btn" class="menu-btn" aria-label="menu" aria-expanded="false">&#9776;</button>
     <div id="menu-panel" class="menu-panel" hidden>
@@ -80,10 +80,11 @@
           covering of the output pattern.</li>
       <li>DH, Proposition 19.1: if a matrix <var>A</var> has a stable label <var>f</var> and <var>A</var>[<var>n</var>] is not
           empty, then <var>A</var>[<var>n</var>] has a stable label <var>g</var> whose last value is smaller than the last
-          value of <var>f</var>. It needs finite reflection for the relations, which holds for &lt;<sub>1</sub>,
-          &lt;<sub>2</sub> in R<sub>2</sub> and for &lt;<sub>1</sub>, &lt;<sub>2</sub>, &lt;<sub>3</sub> in R<sub>3</sub>
-          (<a href="https://github.com/koteitan/bms-elem-pattern/blob/main/proof/README.md">proof</a>,
-          <a href="https://github.com/koteitan/bms-elem-pattern/blob/main/proof/TSS.md">3 rows</a>, Lean).</li>
+          value of <var>f</var>. It needs finite reflection for the relations, which holds for &lt;<sub>1</sub>, &hellip;,
+          &lt;<sub>N</sub> in R<sub>N</sub> for every <var>N</var>
+          (proof in Lean: <a href="https://github.com/koteitan/bms-elem-pattern/blob/main/proof/pss/README-en.md">2 rows</a>,
+          <a href="https://github.com/koteitan/bms-elem-pattern/blob/main/proof/tss/README-en.md">3 rows</a>,
+          <a href="https://github.com/koteitan/bms-elem-pattern/blob/main/proof/bms/README-en.md">every number of rows</a>).</li>
       <li>Wilken, <a href="https://arxiv.org/abs/1608.08421">Pure patterns of order 2</a>, Theorems 4.3, 4.4 and
           Corollary 4.8: every respecting forest of order 2 has a unique isominimal realization, and it is pointwise
           below every covering.</li>

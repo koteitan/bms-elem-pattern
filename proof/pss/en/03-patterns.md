@@ -91,7 +91,7 @@ In Lean, the level index is shifted by one: `lev N j a b` is $`a \le_{j+1} b`$ a
 
 | Concept | Lean | File |
 |---|---|---|
-| Recursion of the definition | `stage`, `RFix`, `RN` | [`Pattern/Basic.lean`](../../lean/Pattern/Basic.lean) |
+| Recursion of the definition | `stage`, `RFix`, `RN` | [`Pattern/Basic.lean`](../../../lean/Pattern/Basic.lean) |
 | $`\le_{j+1}`$, $`\lt_{j+1}`$ | `lev N j`, `lab N j` | same |
 | Defining formula | `rel_iff`, `lev_iff` | same |
 | Only pairs below $`\beta`$ matter | `sig_congr`, `stage_agree`, `elem_congr` | same |

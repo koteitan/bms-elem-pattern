@@ -91,7 +91,7 @@ Lean では段の番号が 1 つずれる。`lev N j a b` が $`a \le_{j+1} b`$�
 
 | 概念 | Lean | ファイル |
 |---|---|---|
-| 定義の再帰 | `stage`, `RFix`, `RN` | [`Pattern/Basic.lean`](../lean/Pattern/Basic.lean) |
+| 定義の再帰 | `stage`, `RFix`, `RN` | [`Pattern/Basic.lean`](../../lean/Pattern/Basic.lean) |
 | $`\le_{j+1}`$、$`\lt_{j+1}`$ | `lev N j`, `lab N j` | 同上 |
 | 定義の式 | `rel_iff`, `lev_iff` | 同上 |
 | $`\beta`$ 未満の組しか見ない | `sig_congr`, `stage_agree`, `elem_congr` | 同上 |

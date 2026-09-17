@@ -1,10 +1,10 @@
-[← Back](README.md) | [English](en/TSS.md) | [Japanese](TSS.md)
+[← Back](../../README.md) | [English](README-en.md) | [Japanese](README.md)
 
 # Σ₃ 初等部分構造によるトリオ数列システムの停止性の証明
 
-[ペア数列の証明](README.md) を 3 行に広げた。
+[ペア数列の証明](../pss/README.md) を 3 行に広げた。
 ラベルの関係には $`\mathcal{R}_2`$ の代わりに $`\mathcal{R}_3 = (\mathrm{Ord}; \le, \le_1, \le_2, \le_3)`$ の関係を使う。
-Lean では $`\mathcal{R}_N`$ を一般の $`N`$ で定義し、1〜3 行（原始数列、ペア数列、トリオ数列）を 1 つの定理で扱う。
+Lean では $`\mathcal{R}_N`$ を一般の $`N`$ で定義し、すべての行数を 1 つの定理で扱う（[bms](../bms/README.md)）。
 
 ## 結論
 
@@ -162,13 +162,13 @@ $`\omega_1`$ の中の閉包で作った $`\lambda(\gamma)`$ は、ブロック�
 - **4 行以上**
   - (d) に $`m = 2`$ の条件 $`y_i \lt_3 \beta \Rightarrow y'_i \lt_3 \alpha`$ が加わる
   - §5 の方法を使うには、(P2)(P4)(P6)(P7) を一段上げた性質が要る。(P4) は $`\Sigma_2`$ 文の証人と反例を収める議論なので、$`\Sigma_3`$ ではそのままは使えない
-  - 4 行以上は扱っていない
+  - 4 行以上は、(P4) に条件を足した P4′ と論理式 $`\Phi_m`$ を使う別の方法で示した。[bms](../bms/README.md) にある
 
 ## 8. Lean との対応
 
 | 数学 | Lean | ファイル |
 |---|---|---|
-| $`\le_j`$ の定義 | `RFix`, `RN`, `lev`, `lev_iff` | [`Basic.lean`](../lean/Pattern/Basic.lean) |
+| $`\le_j`$ の定義 | `RFix`, `RN`, `lev`, `lev_iff` | [`Basic.lean`](../../lean/Pattern/Basic.lean) |
 | $`\lt_j`$ | `lab` | 同上 |
 | 論理式、原子図式 | `Sig`, `diag`, `Elem` | 同上 |
 | (P1) | `lev0_of_le` | 同上 |
@@ -178,13 +178,13 @@ $`\omega_1`$ の中の閉包で作った $`\lambda(\gamma)`$ は、ブロック�
 | (P5) | `succ_lt_of_lab0` | 同上 |
 | (P6) | `succ_lt_of_lab1_top` | 同上 |
 | (P7) | `exists_lev0_below` | 同上 |
-| 有限反映 $`n = 0, 1, 2`$ | `reflect_zero`, `reflect_one`, `reflect_two` | [`Reflect.lean`](../lean/Pattern/Reflect.lean) |
+| 有限反映 $`n = 0, 1, 2`$ | `reflect_zero`, `reflect_one`, `reflect_two` | [`Reflect.lean`](../../lean/Pattern/Reflect.lean) |
 | ラベルの体系 | `labelSystem` | 同上 |
-| $`\lambda`$ | `next`, `lam`, `lam_elem` | [`Chain.lean`](../lean/Pattern/Chain.lean) |
+| $`\lambda`$ | `next`, `lam`, `lam_elem` | [`Chain.lean`](../../lean/Pattern/Chain.lean) |
 | すべての段で結ばれた鎖 | `lab_lam`, `exists_chain` | 同上 |
-| $`S^r_n`$、標準列 | `stair`, `Std` | [`Main.lean`](../lean/Pattern/Main.lean) |
+| $`S^r_n`$、標準列 | `stair`, `Std` | [`Main.lean`](../../lean/Pattern/Main.lean) |
 | $`S^r_n`$ のラベル | `stable_stair` | 同上 |
-| 停止性（$`r \le 3`$） | `terminates` | 同上 |
+| 停止性（行数の制限なし、[bms](../bms/README.md)） | `terminates` | 同上 |
 | トリオ数列、ペア数列の停止性 | `tss_terminates`, `pss_terminates` | 同上 |
 | 整礎性 | `StdR_wf` | 同上 |
-| 命題 19.1 | `descent` | [`Bm4/Label.lean`](../lean/Bm4/Label.lean) |
+| 命題 19.1 | `descent` | [`Bm4/Label.lean`](../../lean/Bm4/Label.lean) |

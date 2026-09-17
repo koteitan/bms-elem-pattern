@@ -85,7 +85,7 @@ These are not formalized.
 
 | Concept | Lean | File |
 |---|---|---|
-| Formulas | `Form` | [`Pattern/Chain.lean`](../../lean/Pattern/Chain.lean) |
+| Formulas | `Form` | [`Pattern/Chain.lean`](../../../lean/Pattern/Chain.lean) |
 | Indexing parameters | `params`, `exists_params` | same |
 | Height of witnesses | `witHeight`, `witHeight_lt` | same |
 | $`\mathrm{next}`$ | `next`, `lt_next`, `next_lt` | same |

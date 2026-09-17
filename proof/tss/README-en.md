@@ -1,10 +1,10 @@
-[← Back](../README-en.md) | [English](TSS.md) | [Japanese](../TSS.md)
+[← Back](../../README-en.md) | [English](README-en.md) | [Japanese](README.md)
 
 # Termination Proof of the Trio Sequence System via Σ₃-Elementary Substructures
 
-We extend [the proof for pair sequences](../README-en.md) to 3 rows.
+We extend [the proof for pair sequences](../pss/README-en.md) to 3 rows.
 The labels are related by the relations of $`\mathcal{R}_3 = (\mathrm{Ord}; \le, \le_1, \le_2, \le_3)`$ instead of $`\mathcal{R}_2`$.
-In Lean, $`\mathcal{R}_N`$ is defined for general $`N`$, and 1 to 3 rows (primitive, pair and trio sequences) are treated by a single theorem.
+In Lean, $`\mathcal{R}_N`$ is defined for general $`N`$, and every number of rows is treated by a single theorem ([bms](../bms/README-en.md)).
 
 ## Result
 
@@ -160,7 +160,7 @@ The rest is as for pair sequences: termination follows because Proposition 19.1 
 - **4 or more rows**
   - (d) gains the condition $`y_i \lt_3 \beta \Rightarrow y'_i \lt_3 \alpha`$ for $`m = 2`$
   - Using the method of §5 would require (P2)(P4)(P6)(P7) one level higher. (P4) is an argument placing the witnesses and counterexamples of a $`\Sigma_2`$ sentence, so it does not carry over to $`\Sigma_3`$ as it is
-  - 4 or more rows are not treated
+  - 4 or more rows are shown by a different method that uses P4′, which is (P4) with an extra condition, and the formulas $`\Phi_m`$; see [bms](../bms/README-en.md)
 
 ## 8. Correspondence with Lean
 
@@ -182,7 +182,7 @@ The rest is as for pair sequences: termination follows because Proposition 19.1 
 | Chains related at every level | `lab_lam`, `exists_chain` | same |
 | $`S^r_n`$, standard arrays | `stair`, `Std` | [`Main.lean`](../../lean/Pattern/Main.lean) |
 | Labels of $`S^r_n`$ | `stable_stair` | same |
-| Termination ($`r \le 3`$) | `terminates` | same |
+| Termination (no bound on the number of rows, [bms](../bms/README-en.md)) | `terminates` | same |
 | Termination of trio and pair sequences | `tss_terminates`, `pss_terminates` | same |
 | Well-foundedness | `StdR_wf` | same |
 | Proposition 19.1 | `descent` | [`Bm4/Label.lean`](../../lean/Bm4/Label.lean) |

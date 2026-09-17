@@ -85,7 +85,7 @@ $`\square`$
 
 | 概念 | Lean | ファイル |
 |---|---|---|
-| 論理式の組 | `Form` | [`Pattern/Chain.lean`](../lean/Pattern/Chain.lean) |
+| 論理式の組 | `Form` | [`Pattern/Chain.lean`](../../lean/Pattern/Chain.lean) |
 | パラメータの番号づけ | `params`, `exists_params` | 同上 |
 | 証人の高さ | `witHeight`, `witHeight_lt` | 同上 |
 | $`\mathrm{next}`$ | `next`, `lt_next`, `next_lt` | 同上 |

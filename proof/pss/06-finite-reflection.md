@@ -109,7 +109,7 @@ Wilken（arXiv 版 v1 の補題 4.2）は、$`\alpha \lt_3 \beta`$ なら $`\alp
 
 ## 6. 4 行で同じ方法が使えない理由
 
-$`n = 3`$ では、(d) に $`m = 2`$ の条件 $`y_i \lt_3 \beta \Rightarrow y'_i \lt_3 \alpha`$ が加わる。§5 と同じ形の論理式を作るには、P2、P4、P6、P7 を一段上げた性質が要る。そのうち P4 は、[04](04-pattern-properties.md) で見たとおり $`\Sigma_3`$ ではそのまま成り立たない。4 行以上は扱っていない。
+$`n = 3`$ では、(d) に $`m = 2`$ の条件 $`y_i \lt_3 \beta \Rightarrow y'_i \lt_3 \alpha`$ が加わる。§5 と同じ形の論理式を作るには、P2、P4、P6、P7 を一段上げた性質が要る。そのうち P4 は、[04](04-pattern-properties.md) で見たとおり $`\Sigma_3`$ ではそのまま成り立たない。4 行以上は、P4 に条件を足した P4′ と論理式 $`\Phi_m`$ を使う別の証明で示した（[bms 05](../bms/05-finite-reflection.md)）。
 
 ## 7. 証明での使われ方
 
@@ -121,7 +121,7 @@ $`n = 3`$ では、(d) に $`m = 2`$ の条件 $`y_i \lt_3 \beta \Rightarrow y'_
 
 | 概念 | Lean | ファイル |
 |---|---|---|
-| $`X`$ を列にする | `listTuple`, `listTuple_lt`, `mem_listTuple` | [`Pattern/Reflect.lean`](../lean/Pattern/Reflect.lean) |
+| $`X`$ を列にする | `listTuple`, `listTuple_lt`, `mem_listTuple` | [`Pattern/Reflect.lean`](../../lean/Pattern/Reflect.lean) |
 | 原子図式が同じ | `SameBits`, `Agree`, `agree_iff`, `lab_transfer` | 同上 |
 | §2 の補題 | `copy_props` | 同上 |
 | §3 | `reflect_zero` | 同上 |

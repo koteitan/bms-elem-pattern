@@ -77,6 +77,7 @@ $`\vartheta_1 = \vartheta^\Omega`$ なので、この表は §1 を $`\tau = \Om
 | $`\vartheta_1(\Omega_2 + \Omega)`$ | $`\vartheta_1(\vartheta_2(0) + \vartheta_1(0))`$ | $`\varepsilon_{\Omega \cdot 2}`$ |
 | $`\vartheta_1(\Omega_2 \cdot 2)`$ | $`\vartheta_1(\vartheta_2(0) + \vartheta_2(0))`$ | $`\varphi(2, \Omega+1)`$ |
 | $`\vartheta_1(\Omega_2^2)`$ | $`\vartheta_1(\vartheta_2(\vartheta_2(0)))`$ | $`\Gamma_{\Omega+1}`$ |
+| $`\vartheta_1(\varepsilon_{\Omega_2+1})`$ | $`\vartheta_1(\vartheta_2(\vartheta_3(0)))`$ | $`\Omega`$ の上の BHO |
 | $`\vartheta_2(0)`$ | $`\vartheta_2(0)`$ | $`\Omega_2`$ |
 | $`\vartheta_2(1)`$ | $`\vartheta_2(\vartheta_0(0))`$ | $`\Omega_2 \cdot \omega`$ |
 | $`\vartheta_2(\Omega_2)`$ | $`\vartheta_2(\vartheta_2(0))`$ | $`\Omega_2^2`$ |
@@ -84,6 +85,7 @@ $`\vartheta_1 = \vartheta^\Omega`$ なので、この表は §1 を $`\tau = \Om
 | $`\vartheta_3(0)`$ | $`\vartheta_3(0)`$ | $`\Omega_3`$ |
 
 - $`\Omega`$ は ε 数、ζ 数、Γ 数のどれでもある。よって $`\Omega`$ より大きい最小の ε 数は $`\varepsilon_{\Omega+1}`$、最小の ζ 数は $`\varphi(2, \Omega+1)`$、最小の Γ 数は $`\Gamma_{\Omega+1}`$ である
+- 「$`\Omega`$ の上の BHO」は、§1 の $`\vartheta_0(\vartheta_1(\vartheta_2(0))) = \mathrm{BHO}`$ を 1 段上げたものである。$`\vartheta_1 = \vartheta^\Omega`$ なので、BHO の作り方を $`\Omega`$ の上でやり直した順序数になり、$`\Omega`$ と $`\Omega_2`$ の間にある。決まった名前は無い
 - $`\Omega = \omega^\Omega`$ なので $`\Omega^\alpha = \omega^{\Omega \cdot \alpha}`$ である。たとえば $`\Omega^3 = \omega^{\Omega \cdot 3}`$、$`\Omega^{\Omega^\Omega} = \omega^{\Omega^\Omega}`$
 
 ## 3. 相対化した ϑ^τ

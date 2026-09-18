@@ -42,6 +42,31 @@ Buchholz の $`\psi`$（$`\Omega_0 = 1`$、$`\nu \le \omega`$ の $`\psi_\nu`$�
 
 SVO は小 Veblen 順序数、LVO は大 Veblen 順序数、BHO は Bachmann–Howard 順序数である。
 
+### 1.1 ε₀ と ε₁ の間
+
+$`\varepsilon_0`$ と $`\varepsilon_1`$ の間の加法的主要数は、すべて $`\vartheta_0(\eta)`$（$`\varepsilon_0 \le \eta \lt \varepsilon_1`$）の形で名前が付く。$`\vartheta_0`$ は単射なので、この区間では [03](03-examples.md) §1 の $`\bar\omega`$ の並べ方そのものである。
+
+- $`\eta = \varepsilon_0 + k`$（$`k \lt \omega`$）のとき $`\vartheta_0(\eta) = \omega^{\eta+1}`$
+- それ以外のとき $`\vartheta_0(\eta) = \omega^\eta`$
+- Buchholz では $`\psi_0(\Omega + \alpha) = \omega^{\varepsilon_0+\alpha}`$（$`\alpha \ge 1`$ で、$`\alpha`$ が hull に入るとき）
+
+| ϑ の項 | 値 | 別の書き方 | Buchholz の $`\psi`$ |
+|---|---|---|---|
+| $`\vartheta_0(\Omega)`$ | $`\varepsilon_0`$ | $`\omega^{\varepsilon_0}`$ | $`\psi_0(\Omega)`$ |
+| $`\vartheta_0(\varepsilon_0)`$ | $`\varepsilon_0 \cdot \omega`$ | $`\omega^{\varepsilon_0+1}`$ | $`\psi_0(\Omega + 1)`$ |
+| $`\vartheta_0(\varepsilon_0 + 1)`$ | $`\varepsilon_0 \cdot \omega^2`$ | $`\omega^{\varepsilon_0+2}`$ | $`\psi_0(\Omega + 2)`$ |
+| $`\vartheta_0(\varepsilon_0 + k)`$ | $`\varepsilon_0 \cdot \omega^{k+1}`$ | $`\omega^{\varepsilon_0+k+1}`$ | $`\psi_0(\Omega + k + 1)`$ |
+| $`\vartheta_0(\varepsilon_0 + \omega)`$ | $`\varepsilon_0 \cdot \omega^\omega`$ | $`\omega^{\varepsilon_0+\omega}`$ | $`\psi_0(\Omega + \omega)`$ |
+| $`\vartheta_0(\varepsilon_0 \cdot 2)`$ | $`\varepsilon_0^2`$ | $`\omega^{\varepsilon_0 \cdot 2}`$ | $`\psi_0(\Omega + \varepsilon_0)`$ |
+| $`\vartheta_0(\varepsilon_0 \cdot \omega)`$ | $`\varepsilon_0^\omega`$ | $`\omega^{\varepsilon_0 \cdot \omega}`$ | $`\psi_0(\Omega + \varepsilon_0 \cdot \omega)`$ |
+| $`\vartheta_0(\varepsilon_0^2)`$ | $`\varepsilon_0^{\varepsilon_0}`$ | $`\omega^{\varepsilon_0^2}`$ | $`\psi_0(\Omega + \varepsilon_0^2)`$ |
+| $`\vartheta_0(\varepsilon_0^{\varepsilon_0})`$ | $`\omega^{\varepsilon_0^{\varepsilon_0}}`$ | | $`\psi_0(\Omega + \varepsilon_0^{\varepsilon_0})`$ |
+| 上の行の上限 | $`\varepsilon_1`$ | $`\vartheta_0(\Omega + 1)`$ | $`\psi_0(\Omega \cdot 2)`$ |
+
+- $`\varepsilon_0 = \omega^{\varepsilon_0}`$ なので $`\varepsilon_0^\alpha = \omega^{\varepsilon_0 \cdot \alpha}`$ である。これで 2 列目と 3 列目が同じ順序数になる
+- 最後の行：$`\varepsilon_1`$ は塔 $`\varepsilon_0,\ \omega^{\varepsilon_0+1},\ \omega^{\omega^{\varepsilon_0+1}},\ \dots`$ の上限である。$`\varepsilon_1`$ 自身は $`\Delta = 0`$ の段では名前が付かず、$`\vartheta_0(\Omega + 1)`$ になる
+- $`(\varepsilon_0, \varepsilon_1)`$ の順序数は、この表の値の有限和（Cantor 標準形）で全部書ける
+
 **R₂ での意味（Wilken）.**
 
 | 順序数 | $`\mathcal{R}_2`$ での意味 |

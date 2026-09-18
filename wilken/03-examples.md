@@ -71,10 +71,17 @@ $`\varepsilon_0 \cdot 2`$ 以降は $`\varepsilon + k`$ の形ではないので
 | $`\vartheta_1(\Omega^2)`$ | $`\bar\omega^{\Omega+\Omega^2} = \bar\omega^{\Omega^2}`$ | $`\Omega^\Omega`$ |
 | $`\vartheta_2(0)`$ | $`\Omega_2`$ | $`\Omega_2`$ |
 | $`\vartheta_1(\Omega_2)`$ | (4)(5)(6) | $`\varepsilon_{\Omega+1}`$ |
+| $`\vartheta_1(\varepsilon_{\Omega+1})`$ | $`\bar\omega^{\varepsilon_{\Omega+1}}`$ | $`\varepsilon_{\Omega+1} \cdot \omega`$ |
+| $`\vartheta_1(\Omega_2 + 1)`$ | (5)(6) | $`\varepsilon_{\Omega+2}`$ |
+| $`\vartheta_1(\Omega_2 + \Omega)`$ | (5)(6) | $`\varepsilon_{\Omega \cdot 2}`$ |
+| $`\vartheta_1(\Omega_2 \cdot 2)`$ | (5)(6) | $`\varphi(2, \Omega+1)`$ |
+| $`\vartheta_1(\Omega_2^2)`$ | (5)(6) | $`\Gamma_{\Omega+1}`$ |
 
 - $`\Omega`$ は ε 数なので、$`\bar\omega^\Omega = \omega^{\Omega+1} = \Omega \cdot \omega`$
 - $`\Omega^2 = \omega^\Omega \cdot \omega^\Omega = \omega^{\Omega \cdot 2}`$、$`\Omega^\omega = \omega^{\Omega \cdot \omega}`$、$`\Omega^\Omega = \omega^{\Omega^2}`$
 - 最後の行：(6) から $`\vartheta_1 = \vartheta^{\Omega_1}`$。引数 $`\Omega_2`$ は段 $`\Omega_2`$ の最初なので、(4)(5) から値は $`\Omega_1`$ より大きい最小の ε 数 $`\varepsilon_{\Omega+1}`$
+- (6) から $`\vartheta_1 = \vartheta^{\Omega_1}`$ なので、§4 の $`\vartheta_0`$ の計算をそのまま $`\tau = \Omega`$ に移せる。$`\Omega_2`$ が $`\Omega`$ の役をする
+- $`\Omega`$ は ε 数、ζ 数、Γ 数のどれでもある（$`\varepsilon_\Omega = \varphi(2, \Omega) = \Gamma_\Omega = \Omega`$）。よって $`\Omega`$ より大きい最小の ε 数は $`\varepsilon_{\Omega+1}`$、最小の ζ 数は $`\varphi(2, \Omega+1)`$、最小の Γ 数は $`\Gamma_{\Omega+1}`$ である
 
 項で書くと、$`\Omega \cdot \omega = \vartheta_1(1)`$、$`\Omega^2 = \vartheta_1(\vartheta_1(0))`$、$`\Omega^\omega = \vartheta_1(\vartheta_1(1))`$、$`\Omega^\Omega = \vartheta_1(\vartheta_1(\vartheta_1(0)))`$、$`\varepsilon_{\Omega+1} = \vartheta_1(\vartheta_2(0))`$ である。
 

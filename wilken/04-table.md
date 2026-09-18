@@ -17,35 +17,43 @@ Buchholz の $`\psi`$（$`\Omega_0 = 1`$、$`\nu \le \omega`$ の $`\psi_\nu`$�
 
 §1〜§3 の表は値の小さい順、§4 の表は添字の順に並べてある。
 
+「全部 ϑ で書いた項」の列は、略記をすべて展開したものである。使う書き換えは次のとおり。
+
+```math
+1 = \vartheta_0(0), \quad \omega = \vartheta_0(\vartheta_0(0)), \quad \Omega = \vartheta_1(0), \quad \varepsilon_0 = \vartheta_0(\vartheta_1(0)), \quad \Omega_2 = \vartheta_2(0)
+```
+
+自然数 $`k`$ は $`\vartheta_0(0)`$ を $`k`$ 個足したものである。
+
 ## 1. ϑ₀（τ = 1）
 
-| ϑ の項 | 値 | 別の書き方 | Buchholz の $`\psi`$ | 根拠 |
-|---|---|---|---|---|
-| $`\vartheta_0(0)`$ | $`1`$ | $`\varphi(0, 0)`$ | $`\psi_0(0)`$ | W |
-| $`\vartheta_0(1)`$ | $`\omega`$ | $`\varphi(0, 1)`$ | $`\psi_0(1)`$ | W |
-| $`\vartheta_0(2)`$ | $`\omega^2`$ | | $`\psi_0(2)`$ | 計算 §2 |
-| $`\vartheta_0(\omega)`$ | $`\omega^\omega`$ | | $`\psi_0(\omega)`$ | 計算 §2 |
-| $`\vartheta_0(\Omega)`$ | $`\varepsilon_0`$ | $`\varphi(1, 0)`$ | $`\psi_0(\Omega)`$ | W |
-| $`\vartheta_0(\varepsilon_0)`$ | $`\varepsilon_0 \cdot \omega`$ | $`\omega^{\varepsilon_0+1}`$ | $`\psi_0(\Omega + 1)`$ | W |
-| $`\vartheta_0(\varepsilon_0 + 1)`$ | $`\varepsilon_0 \cdot \omega^2`$ | $`\omega^{\varepsilon_0+2}`$ | $`\psi_0(\Omega + 2)`$ | 計算 §2 |
-| $`\vartheta_0(\varepsilon_0 + k)`$ | $`\varepsilon_0 \cdot \omega^{k+1}`$ | $`\omega^{\varepsilon_0+k+1}`$ | $`\psi_0(\Omega + k + 1)`$ | 計算 §2 |
-| $`\vartheta_0(\varepsilon_0 + \omega)`$ | $`\varepsilon_0 \cdot \omega^\omega`$ | $`\omega^{\varepsilon_0+\omega}`$ | $`\psi_0(\Omega + \omega)`$ | 計算 §2 |
-| $`\vartheta_0(\varepsilon_0 \cdot 2)`$ | $`\varepsilon_0^2`$ | $`\omega^{\varepsilon_0 \cdot 2}`$ | $`\psi_0(\Omega + \varepsilon_0)`$ | 計算 §2 |
-| $`\vartheta_0(\varepsilon_0 \cdot \omega)`$ | $`\varepsilon_0^\omega`$ | $`\omega^{\varepsilon_0 \cdot \omega}`$ | $`\psi_0(\Omega + \varepsilon_0 \cdot \omega)`$ | 計算 §2 |
-| $`\vartheta_0(\varepsilon_0^2)`$ | $`\varepsilon_0^{\varepsilon_0}`$ | $`\omega^{\varepsilon_0^2}`$ | $`\psi_0(\Omega + \varepsilon_0^2)`$ | 計算 §2 |
-| $`\vartheta_0(\varepsilon_0^{\varepsilon_0})`$ | $`\omega^{\varepsilon_0^{\varepsilon_0}}`$ | | $`\psi_0(\Omega + \varepsilon_0^{\varepsilon_0})`$ | 計算 §2 |
-| $`\vartheta_0(\Omega + 1)`$ | $`\varepsilon_1`$ | $`\varphi(1, 1)`$ | $`\psi_0(\Omega \cdot 2)`$ | 計算 §4.2 |
-| $`\vartheta_0(\Omega + \varepsilon_0)`$ | $`\varepsilon_{\varepsilon_0}`$ | $`\varphi(1, \varepsilon_0)`$ | $`\psi_0(\Omega \cdot \varepsilon_0)`$ | W |
-| $`\vartheta_0(\Omega \cdot 2)`$ | $`\zeta_0`$ | $`\varphi(2, 0)`$ | $`\psi_0(\Omega^2)`$ | W |
-| $`\vartheta_0(\Omega \cdot 3)`$ | $`\varphi(3, 0)`$ | | $`\psi_0(\Omega^3)`$ | 概略 §4.5 |
-| $`\vartheta_0(\Omega \cdot \omega)`$ | $`\varphi(\omega, 0)`$ | | $`\psi_0(\Omega^\omega)`$ | 概略 §4.5 |
-| $`\vartheta_0(\Omega^2)`$ | $`\Gamma_0`$ | $`\varphi(1, 0, 0)`$ | $`\psi_0(\Omega^\Omega)`$ | W |
-| $`\vartheta_0(\Omega^\omega)`$ | SVO | | $`\psi_0(\Omega^{\Omega^\omega})`$ | 概略 §4.6 |
-| $`\vartheta_0(\Omega^\Omega)`$ | LVO | | $`\psi_0(\Omega^{\Omega^\Omega})`$ | 概略 §4.6 |
-| $`\vartheta_0(\varepsilon_{\Omega+1})`$ | BHO | $`\lvert \mathrm{ID}_1 \rvert`$ | $`\psi_0(\Omega_2)`$ | W |
-| $`\vartheta_0(\vartheta_1(\vartheta_2(\vartheta_3(0))))`$ | $`\lvert \mathrm{ID}_2 \rvert`$ | | $`\psi_0(\Omega_3)`$ | W |
-| $`\vartheta_0(\vartheta_1(\cdots \vartheta_{n+1}(0) \cdots))`$ | $`\lvert \mathrm{ID}_n \rvert`$ | | $`\psi_0(\Omega_{n+1})`$ | W |
-| 上の行の $`n \to \omega`$ の上限 | $`\upsilon_1`$ | $`\lvert \Pi^1_1\text{-}\mathrm{CA}_0 \rvert`$ | $`\psi_0(\Omega_\omega)`$ | W |
+| ϑ の項 | 全部 ϑ で書いた項 | 値 | 別の書き方 | Buchholz の $`\psi`$ | 根拠 |
+|---|---|---|---|---|---|
+| $`\vartheta_0(0)`$ | $`\vartheta_0(0)`$ | $`1`$ | $`\varphi(0, 0)`$ | $`\psi_0(0)`$ | W |
+| $`\vartheta_0(1)`$ | $`\vartheta_0(\vartheta_0(0))`$ | $`\omega`$ | $`\varphi(0, 1)`$ | $`\psi_0(1)`$ | W |
+| $`\vartheta_0(2)`$ | $`\vartheta_0(\vartheta_0(0) + \vartheta_0(0))`$ | $`\omega^2`$ | | $`\psi_0(2)`$ | 計算 §2 |
+| $`\vartheta_0(\omega)`$ | $`\vartheta_0(\vartheta_0(\vartheta_0(0)))`$ | $`\omega^\omega`$ | | $`\psi_0(\omega)`$ | 計算 §2 |
+| $`\vartheta_0(\Omega)`$ | $`\vartheta_0(\vartheta_1(0))`$ | $`\varepsilon_0`$ | $`\varphi(1, 0)`$ | $`\psi_0(\Omega)`$ | W |
+| $`\vartheta_0(\varepsilon_0)`$ | $`\vartheta_0(\vartheta_0(\vartheta_1(0)))`$ | $`\varepsilon_0 \cdot \omega`$ | $`\omega^{\varepsilon_0+1}`$ | $`\psi_0(\Omega + 1)`$ | W |
+| $`\vartheta_0(\varepsilon_0 + 1)`$ | $`\vartheta_0(\vartheta_0(\vartheta_1(0)) + \vartheta_0(0))`$ | $`\varepsilon_0 \cdot \omega^2`$ | $`\omega^{\varepsilon_0+2}`$ | $`\psi_0(\Omega + 2)`$ | 計算 §2 |
+| $`\vartheta_0(\varepsilon_0 + k)`$ | $`\vartheta_0(\vartheta_0(\vartheta_1(0)) + \vartheta_0(0) + \cdots + \vartheta_0(0))`$ | $`\varepsilon_0 \cdot \omega^{k+1}`$ | $`\omega^{\varepsilon_0+k+1}`$ | $`\psi_0(\Omega + k + 1)`$ | 計算 §2 |
+| $`\vartheta_0(\varepsilon_0 + \omega)`$ | $`\vartheta_0(\vartheta_0(\vartheta_1(0)) + \vartheta_0(\vartheta_0(0)))`$ | $`\varepsilon_0 \cdot \omega^\omega`$ | $`\omega^{\varepsilon_0+\omega}`$ | $`\psi_0(\Omega + \omega)`$ | 計算 §2 |
+| $`\vartheta_0(\varepsilon_0 \cdot 2)`$ | $`\vartheta_0(\vartheta_0(\vartheta_1(0)) + \vartheta_0(\vartheta_1(0)))`$ | $`\varepsilon_0^2`$ | $`\omega^{\varepsilon_0 \cdot 2}`$ | $`\psi_0(\Omega + \varepsilon_0)`$ | 計算 §2 |
+| $`\vartheta_0(\varepsilon_0 \cdot \omega)`$ | $`\vartheta_0(\vartheta_0(\vartheta_0(\vartheta_1(0))))`$ | $`\varepsilon_0^\omega`$ | $`\omega^{\varepsilon_0 \cdot \omega}`$ | $`\psi_0(\Omega + \varepsilon_0 \cdot \omega)`$ | 計算 §2 |
+| $`\vartheta_0(\varepsilon_0^2)`$ | $`\vartheta_0(\vartheta_0(\vartheta_0(\vartheta_1(0)) + \vartheta_0(\vartheta_1(0))))`$ | $`\varepsilon_0^{\varepsilon_0}`$ | $`\omega^{\varepsilon_0^2}`$ | $`\psi_0(\Omega + \varepsilon_0^2)`$ | 計算 §2 |
+| $`\vartheta_0(\varepsilon_0^{\varepsilon_0})`$ | $`\vartheta_0(\vartheta_0(\vartheta_0(\vartheta_0(\vartheta_1(0)) + \vartheta_0(\vartheta_1(0)))))`$ | $`\omega^{\varepsilon_0^{\varepsilon_0}}`$ | | $`\psi_0(\Omega + \varepsilon_0^{\varepsilon_0})`$ | 計算 §2 |
+| $`\vartheta_0(\Omega + 1)`$ | $`\vartheta_0(\vartheta_1(0) + \vartheta_0(0))`$ | $`\varepsilon_1`$ | $`\varphi(1, 1)`$ | $`\psi_0(\Omega \cdot 2)`$ | 計算 §4.2 |
+| $`\vartheta_0(\Omega + \varepsilon_0)`$ | $`\vartheta_0(\vartheta_1(0) + \vartheta_0(\vartheta_1(0)))`$ | $`\varepsilon_{\varepsilon_0}`$ | $`\varphi(1, \varepsilon_0)`$ | $`\psi_0(\Omega \cdot \varepsilon_0)`$ | W |
+| $`\vartheta_0(\Omega \cdot 2)`$ | $`\vartheta_0(\vartheta_1(0) + \vartheta_1(0))`$ | $`\zeta_0`$ | $`\varphi(2, 0)`$ | $`\psi_0(\Omega^2)`$ | W |
+| $`\vartheta_0(\Omega \cdot 3)`$ | $`\vartheta_0(\vartheta_1(0) + \vartheta_1(0) + \vartheta_1(0))`$ | $`\varphi(3, 0)`$ | | $`\psi_0(\Omega^3)`$ | 概略 §4.5 |
+| $`\vartheta_0(\Omega \cdot \omega)`$ | $`\vartheta_0(\vartheta_1(\vartheta_0(0)))`$ | $`\varphi(\omega, 0)`$ | | $`\psi_0(\Omega^\omega)`$ | 概略 §4.5 |
+| $`\vartheta_0(\Omega^2)`$ | $`\vartheta_0(\vartheta_1(\vartheta_1(0)))`$ | $`\Gamma_0`$ | $`\varphi(1, 0, 0)`$ | $`\psi_0(\Omega^\Omega)`$ | W |
+| $`\vartheta_0(\Omega^\omega)`$ | $`\vartheta_0(\vartheta_1(\vartheta_1(\vartheta_0(0))))`$ | SVO | | $`\psi_0(\Omega^{\Omega^\omega})`$ | 概略 §4.6 |
+| $`\vartheta_0(\Omega^\Omega)`$ | $`\vartheta_0(\vartheta_1(\vartheta_1(\vartheta_1(0))))`$ | LVO | | $`\psi_0(\Omega^{\Omega^\Omega})`$ | 概略 §4.6 |
+| $`\vartheta_0(\varepsilon_{\Omega+1})`$ | $`\vartheta_0(\vartheta_1(\vartheta_2(0)))`$ | BHO | $`\lvert \mathrm{ID}_1 \rvert`$ | $`\psi_0(\Omega_2)`$ | W |
+| $`\vartheta_0(\vartheta_1(\vartheta_2(\vartheta_3(0))))`$ | 同じ | $`\lvert \mathrm{ID}_2 \rvert`$ | | $`\psi_0(\Omega_3)`$ | W |
+| $`\vartheta_0(\vartheta_1(\cdots \vartheta_{n+1}(0) \cdots))`$ | 同じ | $`\lvert \mathrm{ID}_n \rvert`$ | | $`\psi_0(\Omega_{n+1})`$ | W |
+| 上の行の $`n \to \omega`$ の上限 | 無い | $`\upsilon_1`$ | $`\lvert \Pi^1_1\text{-}\mathrm{CA}_0 \rvert`$ | $`\psi_0(\Omega_\omega)`$ | W |
 
 SVO は小 Veblen 順序数、LVO は大 Veblen 順序数、BHO は Bachmann–Howard 順序数である。
 
@@ -55,16 +63,16 @@ SVO は小 Veblen 順序数、LVO は大 Veblen 順序数、BHO は Bachmann–H
 
 ## 2. ϑ₁、ϑ₂
 
-| ϑ の項 | 値 | 根拠 |
-|---|---|---|
-| $`\vartheta_1(0)`$ | $`\Omega`$ | 計算 §3 |
-| $`\vartheta_1(1)`$ | $`\Omega \cdot \omega`$ | 計算 §3 |
-| $`\vartheta_1(\omega)`$ | $`\Omega \cdot \omega^\omega`$ | 計算 §3 |
-| $`\vartheta_1(\vartheta_1(0))`$ | $`\Omega^2`$ | W |
-| $`\vartheta_1(\vartheta_1(1))`$ | $`\Omega^\omega`$ | 計算 §3 |
-| $`\vartheta_1(\vartheta_1(\vartheta_1(0)))`$ | $`\Omega^\Omega`$ | 計算 §3 |
-| $`\vartheta_1(\vartheta_2(0))`$ | $`\varepsilon_{\Omega+1}`$ | W |
-| $`\vartheta_2(0)`$ | $`\Omega_2`$ | W |
+| ϑ の項 | 全部 ϑ で書いた項 | 値 | 根拠 |
+|---|---|---|---|
+| $`\vartheta_1(0)`$ | $`\vartheta_1(0)`$ | $`\Omega`$ | 計算 §3 |
+| $`\vartheta_1(1)`$ | $`\vartheta_1(\vartheta_0(0))`$ | $`\Omega \cdot \omega`$ | 計算 §3 |
+| $`\vartheta_1(\omega)`$ | $`\vartheta_1(\vartheta_0(\vartheta_0(0)))`$ | $`\Omega \cdot \omega^\omega`$ | 計算 §3 |
+| $`\vartheta_1(\vartheta_1(0))`$ | 同じ | $`\Omega^2`$ | W |
+| $`\vartheta_1(\vartheta_1(1))`$ | $`\vartheta_1(\vartheta_1(\vartheta_0(0)))`$ | $`\Omega^\omega`$ | 計算 §3 |
+| $`\vartheta_1(\vartheta_1(\vartheta_1(0)))`$ | 同じ | $`\Omega^\Omega`$ | 計算 §3 |
+| $`\vartheta_1(\vartheta_2(0))`$ | 同じ | $`\varepsilon_{\Omega+1}`$ | W |
+| $`\vartheta_2(0)`$ | $`\vartheta_2(0)`$ | $`\Omega_2`$ | W |
 
 ## 3. 相対化した ϑ^τ
 

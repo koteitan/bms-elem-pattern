@@ -66,7 +66,7 @@ Hence $`\{\beta : \omega \le_1 \beta\} = \{\omega, \omega + 1\}`$.
 Not used in the proof. Used when discussing the size of the labels.
 
 - The least $`\lt_2`$ pair in $`\mathcal{R}_2`$ is $`\varepsilon_0 \cdot \omega \lt_2 \varepsilon_0 \cdot (\omega + 1)`$
-- Consider the sequence $`\upsilon_0 = 0`$, $`\upsilon_{\xi + 1} = \upsilon_\xi^\infty`$, $`\upsilon_\lambda = \sup_{\iota \lt \lambda} \upsilon_\iota`$. Here $`\upsilon_\xi^\infty`$ is the countable part of a relativized Buchholz-style notation system built on $`\upsilon_\xi`$, and $`\upsilon_1 = \psi_0(\Omega_\omega)`$
+- Consider the sequence $`\upsilon_0 = 0`$, $`\upsilon_{\xi + 1} = \upsilon_\xi^\infty`$, $`\upsilon_\lambda = \sup_{\iota \lt \lambda} \upsilon_\iota`$. Here $`\upsilon_\xi^\infty = T^{\upsilon_\xi} \cap \Omega`$ is the countable part of Wilken's notation system $`T^{\upsilon_\xi}`$, relativized to $`\upsilon_\xi`$ and built with the collapsing functions $`\vartheta_i`$ (see [wilken/02](../../../wilken/02-upsilon.md), in Japanese). In Buchholz's $`\psi`$, $`\upsilon_1 = \psi_0(\Omega_\omega)`$
 - In $`\mathcal{R}_2`$, for the set $`I`$ of indices $`\iota \gt 1`$ not of the form "limit + 1", $`(\upsilon_\iota)_{\iota \in I}`$ is the maximal $`\lt_2`$ chain
 - $`\psi_0(\Omega_\omega)`$ is the least ordinal below which finite $`\le_2`$ chains of arbitrary length exist
 - The least $`\lt_3`$ pair in $`\mathcal{R}_3`$ is $`\upsilon_{\omega^2} \lt_3 \upsilon_{\omega^2 + 2}`$

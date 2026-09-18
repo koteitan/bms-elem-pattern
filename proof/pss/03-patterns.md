@@ -66,7 +66,7 @@ Lean では、$`\beta`$ についての整礎再帰でこの関係を定義し�
 証明には使わない。ラベルの大きさを論じるときに使う。
 
 - $`\mathcal{R}_2`$ で最小の $`\lt_2`$ の組は $`\varepsilon_0 \cdot \omega \lt_2 \varepsilon_0 \cdot (\omega + 1)`$ である
-- 列 $`\upsilon_0 = 0`$、$`\upsilon_{\xi + 1} = \upsilon_\xi^\infty`$、$`\upsilon_\lambda = \sup_{\iota \lt \lambda} \upsilon_\iota`$ を考える。$`\upsilon_\xi^\infty`$ は $`\upsilon_\xi`$ を材料にした相対化 Buchholz 型表記系の可算部分で、$`\upsilon_1 = \psi_0(\Omega_\omega)`$ である
+- 列 $`\upsilon_0 = 0`$、$`\upsilon_{\xi + 1} = \upsilon_\xi^\infty`$、$`\upsilon_\lambda = \sup_{\iota \lt \lambda} \upsilon_\iota`$ を考える。$`\upsilon_\xi^\infty = T^{\upsilon_\xi} \cap \Omega`$ は、Wilken の表記系 $`T^{\upsilon_\xi}`$（$`\upsilon_\xi`$ に相対化し、つぶし関数 $`\vartheta_i`$ で作る）の可算部分である（[wilken/02](../../wilken/02-upsilon.md)）。Buchholz の $`\psi`$ で書くと $`\upsilon_1 = \psi_0(\Omega_\omega)`$ である
 - $`\mathcal{R}_2`$ で、$`\iota \gt 1`$ が「極限 + 1」の形でない添字全体 $`I`$ について、$`(\upsilon_\iota)_{\iota \in I}`$ は極大の $`\lt_2`$ 鎖である
 - $`\psi_0(\Omega_\omega)`$ は、その下に有限の $`\le_2`$ 鎖がいくらでも長くとれる最小の順序数である
 - $`\mathcal{R}_3`$ で最小の $`\lt_3`$ の組は $`\upsilon_{\omega^2} \lt_3 \upsilon_{\omega^2 + 2}`$ である

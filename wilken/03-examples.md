@@ -36,6 +36,12 @@ $`\xi = \varepsilon_0`$ のとき：$`\omega^0, \omega^1, \dots`$ と数える�
 | $`\omega`$ | $`\bar\omega^{1+\omega} = \bar\omega^\omega`$ | $`\omega^\omega`$ |
 | $`\varepsilon_0`$ | $`\bar\omega^{\varepsilon_0}`$ | $`\varepsilon_0 \cdot \omega`$ |
 | $`\varepsilon_0 + 1`$ | $`\bar\omega^{\varepsilon_0+1}`$ | $`\varepsilon_0 \cdot \omega^2`$ |
+| $`\varepsilon_0 + \omega`$ | $`\bar\omega^{\varepsilon_0+\omega}`$ | $`\varepsilon_0 \cdot \omega^\omega`$ |
+| $`\varepsilon_0 \cdot 2`$ | $`\bar\omega^{\varepsilon_0 \cdot 2}`$ | $`\varepsilon_0^2`$ |
+| $`\varepsilon_0 \cdot \omega`$ | $`\bar\omega^{\varepsilon_0 \cdot \omega}`$ | $`\varepsilon_0^\omega`$ |
+| $`\varepsilon_0^2`$ | $`\bar\omega^{\varepsilon_0^2}`$ | $`\varepsilon_0^{\varepsilon_0}`$ |
+
+$`\varepsilon_0 \cdot 2`$ 以降は $`\varepsilon + k`$ の形ではないので、$`\bar\omega^\xi = \omega^\xi`$ である。$`\varepsilon_0 = \omega^{\varepsilon_0}`$ から $`\varepsilon_0^\alpha = \omega^{\varepsilon_0 \cdot \alpha}`$ なので、右の列のように書ける。
 
 **定義から ϑ₀(ε₀) を確かめる.** $`n = 2`$ の定義 2.1 で、$`C = C^2_0(\varepsilon_0, \xi)`$ を考える。$`\varepsilon_0 \lt \theta^2_1`$ なので、補題 2.15 から $`\vartheta_0(\varepsilon_0) = \vartheta^2_0(\varepsilon_0)`$ である。
 

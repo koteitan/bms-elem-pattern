@@ -63,20 +63,25 @@ Hence $`\{\beta : \omega \le_1 \beta\} = \{\omega, \omega + 1\}`$.
 
 ## 5. What is known from the literature
 
-Not used in the proof. Used when discussing the size of the labels.
+Not used in the proof. Used when discussing the size of the labels. Each claim names its source.
 
-- The least $`\lt_2`$ pair in $`\mathcal{R}_2`$ is $`\varepsilon_0 \cdot \omega \lt_2 \varepsilon_0 \cdot (\omega + 1)`$
-- Consider the sequence $`\upsilon_0 = 0`$, $`\upsilon_{\xi + 1} = \upsilon_\xi^\infty`$, $`\upsilon_\lambda = \sup_{\iota \lt \lambda} \upsilon_\iota`$. Here $`\upsilon_\xi^\infty = T^{\upsilon_\xi} \cap \Omega`$ is the countable part of Wilken's notation system $`T^{\upsilon_\xi}`$, relativized to $`\upsilon_\xi`$ and built with the collapsing functions $`\vartheta_i`$ (see [wilken/02](../../../wilken/02-upsilon.md), in Japanese). In Buchholz's $`\psi`$, $`\upsilon_1 = \psi_0(\Omega_\omega)`$
-- In $`\mathcal{R}_2`$, for the set $`I`$ of indices $`\iota \gt 1`$ not of the form "limit + 1", $`(\upsilon_\iota)_{\iota \in I}`$ is the maximal $`\lt_2`$ chain
-- $`\psi_0(\Omega_\omega)`$ is the least ordinal below which finite $`\le_2`$ chains of arbitrary length exist
-- The least $`\lt_3`$ pair in $`\mathcal{R}_3`$ is $`\upsilon_{\omega^2} \lt_3 \upsilon_{\omega^2 + 2}`$
-- On the initial segment $`\upsilon_{\omega^2 + 2}`$, the relations of $`\mathcal{R}_2`$ and $`\mathcal{R}_3`$ agree
+- The pointwise least $`\lt_2`$ pair in $`\mathcal{R}_2`$ is $`\varepsilon_0 \cdot \omega \lt_2 \varepsilon_0 \cdot (\omega + 1)`$. This is a result of Carlson–Wilken [CW12], quoted in Section 1 of [W21]
+- Consider the sequence $`\upsilon_0 = 0`$, $`\upsilon_{\xi + 1} = \upsilon_\xi^\infty`$, $`\upsilon_\lambda = \sup_{\iota \lt \lambda} \upsilon_\iota`$ (Definition 1.5 of [W21]). Here $`\upsilon_\xi^\infty = T^{\upsilon_\xi} \cap \Omega`$ is the countable part of Wilken's notation system $`T^{\upsilon_\xi}`$, relativized to $`\upsilon_\xi`$ and built with the collapsing functions $`\vartheta_i`$ (see [wilken/02](../../../wilken/02-upsilon.md), in Japanese)
+- $`\upsilon_1 = 1^\infty = \sup_{n \lt \omega} \vartheta_0(\cdots \vartheta_n(0) \cdots)`$ is the proof-theoretic ordinal of $`\mathrm{ID}_{\lt\omega}`$, $`\mathrm{KP}\ell_0`$ and $`\Pi^1_1\text{-}\mathrm{CA}_0`$ (Section 1 of [W21]). In Buchholz's $`\psi`$ it is $`\psi_0(\Omega_\omega)`$. This last equation is not written in Wilken's papers. It is a known value of Buchholz's $`\psi`$, and its source is not checked here
+- In $`\mathcal{R}_2`$, for the set $`I`$ of indices $`\iota \gt 1`$ not of the form "limit + 1", $`(\upsilon_\iota)_{\iota \in I}`$ is the maximal $`\lt_2`$ chain (Theorem 1.8 of [W21])
+- Every finite pattern of $`\mathcal{R}_2`$ has a cover below $`1^\infty`$, and $`1^\infty`$ is the least such ordinal ([CW12]). Hence $`1^\infty = \psi_0(\Omega_\omega)`$ is the least ordinal below which finite $`\le_2`$ chains of arbitrary length exist. This wording is in Section 1 of [W16]
+- The least $`\lt_3`$ pair in $`\mathcal{R}_3`$ is $`\upsilon_{\omega^2} \lt_3 \upsilon_{\omega^2 + 2}`$ (Theorem 4.3 of [W17])
+- On the initial segment $`\upsilon_{\omega^2 + 2}`$, the relations of $`\mathcal{R}_2`$ and $`\mathcal{R}_3`$ agree (Section 4 of [W17])
+
+[W17] is version v1 of the arXiv version of [W21]. Its Section 4 is not in the published version (arXiv v5). Section 1 of v5 says that these two results are shown in Section 21.4 of [W20]. [W20] has not been read here.
 
 Sources:
 
-- G. Wilken, Pure Σ2-elementarity beyond the core, Annals of Pure and Applied Logic 172 (2021). https://doi.org/10.1016/j.apal.2021.103001
-- G. Wilken, Tracking chains revisited. https://arxiv.org/abs/1611.04348
-- G. Wilken, Pure Σ2-Elementarity beyond the Core, Section 4 of arXiv version v1. https://arxiv.org/abs/1710.01870v1
+- [CW12] T. J. Carlson and G. Wilken, Tracking chains of Σ2-elementarity, Annals of Pure and Applied Logic 163 (2012) 23–67. https://doi.org/10.1016/j.apal.2011.08.003
+- [W16] G. Wilken, Tracking chains revisited, Section 1. https://arxiv.org/abs/1611.04348
+- [W17] G. Wilken, Pure Σ2-Elementarity beyond the Core, arXiv version v1 (2017), Section 4. https://arxiv.org/abs/1710.01870v1
+- [W20] G. Wilken, A glimpse of Σ3-elementarity, in R. Kahle and M. Rathjen (eds.), The Legacy of Kurt Schütte, Springer (2020) 415–441
+- [W21] G. Wilken, Pure Σ2-elementarity beyond the core, Annals of Pure and Applied Logic 172 (2021) 103001. https://doi.org/10.1016/j.apal.2021.103001 (arXiv version v5: https://arxiv.org/abs/1710.01870v5)
 
 ## 6. How it is used in the proof
 

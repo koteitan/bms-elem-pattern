@@ -95,11 +95,11 @@ $`\mathrm{Lim}`$ は極限順序数の全体である。$`\iota \mathbin{\dot{-}
 - $`\upsilon_1`$ は $`\le_1`$-最小である。つまり $`\alpha \lt_1 \upsilon_1`$ となる $`\alpha`$ は無い
 - $`\upsilon_{\lambda+1}`$ の最大の $`\lt_1`$-前者は $`\upsilon_\lambda`$ である
 - $`\upsilon_\omega`$ は、$`\mathcal{R}_2`$ の最初の無限 $`\lt_2`$ 鎖の上限である（2021 の 3 節）。また、自分の $`\lt_2`$-前者の真の上限になっている最小の順序数である（arXiv 版 v1 の 4 節）
-- $`\mathcal{R}_2`$ のコア（すべての有限パターンの各点最小の実現の和集合）は $`\upsilon_1`$ である
+- $`\mathcal{R}_2`$ のコア（すべての有限パターンの各点最小の実現の和集合）は $`\upsilon_1`$ である（G. Wilken, Pure patterns of order 2, Annals of Pure and Applied Logic 169 (2018) 54–82。Wilken 2021 の 1 節に引用されている）
 
 ## 4. R₃ での役割
 
-$`\mathcal{R}_3 = (\mathrm{Ord}; \le, \le_1, \le_2, \le_3)`$ とする。次は Wilken, "Pure Σ2-elementarity beyond the core" の arXiv 版 v1 の 4 節にある。
+$`\mathcal{R}_3 = (\mathrm{Ord}; \le, \le_1, \le_2, \le_3)`$ とする。次は Wilken, "Pure Σ2-elementarity beyond the core" の arXiv 版 v1 の 4 節にある。雑誌に載った版（arXiv 版 v5）にはこの節は無く、v5 の 1 節は、同じ結果を Wilken, "A glimpse of Σ3-elementarity"（The Legacy of Kurt Schütte, Springer 2020, 415–441）の 21.4 節で示すと書いている。
 
 1. 始切片 $`\upsilon_{\omega^2+2}`$ の上で、$`\mathcal{R}_2`$ と $`\mathcal{R}_3`$ の $`\le_1`$、$`\le_2`$ は一致する
 2. $`\alpha \lt_3 \beta`$ なら、$`\alpha`$ は自分の $`\lt_2`$-前者の真の上限である（補題 4.2）

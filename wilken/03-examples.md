@@ -52,7 +52,7 @@ $`\varepsilon_0 \cdot 2`$ 以降は $`\varepsilon + k`$ の形ではないので
 
 よって $`\vartheta_0(\varepsilon_0) = \varepsilon_0 \cdot \omega`$。$`\square`$
 
-**注意.** $`\varepsilon_0 \cdot \omega`$ は、$`\mathcal{R}_2`$ で $`\lt_2`$-後者を持つ最小の順序数である（Wilken 2021 の 3 節）。
+**注意.** $`\varepsilon_0 \cdot \omega`$ は、$`\mathcal{R}_2`$ で $`\lt_2`$-後者を持つ最小の順序数である（Carlson–Wilken 2012 の結果。Wilken 2021 の 1 節に引用されている）。
 
 ## 3. ϑ₁、ϑ₂ の値
 

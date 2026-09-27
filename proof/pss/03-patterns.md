@@ -63,20 +63,25 @@ Lean では、$`\beta`$ についての整礎再帰でこの関係を定義し�
 
 ## 5. 文献で分かっていること
 
-証明には使わない。ラベルの大きさを論じるときに使う。
+証明には使わない。ラベルの大きさを論じるときに使う。主張ごとに出典を書く。
 
-- $`\mathcal{R}_2`$ で最小の $`\lt_2`$ の組は $`\varepsilon_0 \cdot \omega \lt_2 \varepsilon_0 \cdot (\omega + 1)`$ である
-- 列 $`\upsilon_0 = 0`$、$`\upsilon_{\xi + 1} = \upsilon_\xi^\infty`$、$`\upsilon_\lambda = \sup_{\iota \lt \lambda} \upsilon_\iota`$ を考える。$`\upsilon_\xi^\infty = T^{\upsilon_\xi} \cap \Omega`$ は、Wilken の表記系 $`T^{\upsilon_\xi}`$（$`\upsilon_\xi`$ に相対化し、つぶし関数 $`\vartheta_i`$ で作る）の可算部分である（[wilken/02](../../wilken/02-upsilon.md)）。Buchholz の $`\psi`$ で書くと $`\upsilon_1 = \psi_0(\Omega_\omega)`$ である
-- $`\mathcal{R}_2`$ で、$`\iota \gt 1`$ が「極限 + 1」の形でない添字全体 $`I`$ について、$`(\upsilon_\iota)_{\iota \in I}`$ は極大の $`\lt_2`$ 鎖である
-- $`\psi_0(\Omega_\omega)`$ は、その下に有限の $`\le_2`$ 鎖がいくらでも長くとれる最小の順序数である
-- $`\mathcal{R}_3`$ で最小の $`\lt_3`$ の組は $`\upsilon_{\omega^2} \lt_3 \upsilon_{\omega^2 + 2}`$ である
-- 始切片 $`\upsilon_{\omega^2 + 2}`$ の上では、$`\mathcal{R}_2`$ と $`\mathcal{R}_3`$ の関係は一致する
+- $`\mathcal{R}_2`$ で各点最小の $`\lt_2`$ の組は $`\varepsilon_0 \cdot \omega \lt_2 \varepsilon_0 \cdot (\omega + 1)`$ である。Carlson–Wilken [CW12] の結果で、[W21] の 1 節に引用されている
+- 列 $`\upsilon_0 = 0`$、$`\upsilon_{\xi + 1} = \upsilon_\xi^\infty`$、$`\upsilon_\lambda = \sup_{\iota \lt \lambda} \upsilon_\iota`$ を考える（[W21] の定義 1.5）。$`\upsilon_\xi^\infty = T^{\upsilon_\xi} \cap \Omega`$ は、Wilken の表記系 $`T^{\upsilon_\xi}`$（$`\upsilon_\xi`$ に相対化し、つぶし関数 $`\vartheta_i`$ で作る）の可算部分である（[wilken/02](../../wilken/02-upsilon.md)）
+- $`\upsilon_1 = 1^\infty = \sup_{n \lt \omega} \vartheta_0(\cdots \vartheta_n(0) \cdots)`$ は $`\mathrm{ID}_{\lt\omega}`$、$`\mathrm{KP}\ell_0`$、$`\Pi^1_1\text{-}\mathrm{CA}_0`$ の証明論的順序数である（[W21] の 1 節）。Buchholz の $`\psi`$ で書くと $`\psi_0(\Omega_\omega)`$ である。この最後の等式は Wilken の論文には書かれていない。Buchholz の $`\psi`$ で知られた値であり、ここでは文献を確かめていない
+- $`\mathcal{R}_2`$ で、$`\iota \gt 1`$ が「極限 + 1」の形でない添字全体 $`I`$ について、$`(\upsilon_\iota)_{\iota \in I}`$ は極大の $`\lt_2`$ 鎖である（[W21] の定理 1.8）
+- $`\mathcal{R}_2`$ のどの有限パターンも $`1^\infty`$ 未満に被覆を持ち、$`1^\infty`$ はそういう最小の順序数である（[CW12]）。したがって $`1^\infty = \psi_0(\Omega_\omega)`$ は、その下に有限の $`\le_2`$ 鎖がいくらでも長くとれる最小の順序数である。この言い方は [W16] の 1 節にある
+- $`\mathcal{R}_3`$ で最小の $`\lt_3`$ の組は $`\upsilon_{\omega^2} \lt_3 \upsilon_{\omega^2 + 2}`$ である（[W17] の定理 4.3）
+- 始切片 $`\upsilon_{\omega^2 + 2}`$ の上では、$`\mathcal{R}_2`$ と $`\mathcal{R}_3`$ の関係は一致する（[W17] の 4 節）
+
+[W17] は [W21] の arXiv 版の v1 である。この 4 節は、雑誌に載った版（arXiv 版の v5）には無い。v5 の 1 節は、この 2 つの結果を [W20] の 21.4 節で示すと書いている。[W20] は、ここでは読んでいない。
 
 出典：
 
-- G. Wilken, Pure Σ2-elementarity beyond the core, Annals of Pure and Applied Logic 172 (2021). https://doi.org/10.1016/j.apal.2021.103001
-- G. Wilken, Tracking chains revisited. https://arxiv.org/abs/1611.04348
-- G. Wilken, Pure Σ2-Elementarity beyond the Core, arXiv 版 v1 の第 4 節. https://arxiv.org/abs/1710.01870v1
+- [CW12] T. J. Carlson and G. Wilken, Tracking chains of Σ2-elementarity, Annals of Pure and Applied Logic 163 (2012) 23–67. https://doi.org/10.1016/j.apal.2011.08.003
+- [W16] G. Wilken, Tracking chains revisited, 1 節. https://arxiv.org/abs/1611.04348
+- [W17] G. Wilken, Pure Σ2-Elementarity beyond the Core, arXiv 版 v1 (2017), 4 節. https://arxiv.org/abs/1710.01870v1
+- [W20] G. Wilken, A glimpse of Σ3-elementarity, in R. Kahle and M. Rathjen (eds.), The Legacy of Kurt Schütte, Springer (2020) 415–441
+- [W21] G. Wilken, Pure Σ2-elementarity beyond the core, Annals of Pure and Applied Logic 172 (2021) 103001. https://doi.org/10.1016/j.apal.2021.103001 （arXiv 版 v5: https://arxiv.org/abs/1710.01870v5）
 
 ## 6. 証明での使われ方
 

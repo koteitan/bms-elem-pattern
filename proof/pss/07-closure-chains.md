@@ -70,8 +70,8 @@ $`\square`$
 
 この構成で得られる順序数は $`\omega_1`$ 未満だが、どこにあるかは分からない。
 
-- $`\mathcal{R}_2`$ では、有限の $`\le_2`$ 鎖は $`\psi_0(\Omega_\omega)`$ 未満にいくらでも長く取れることが、Wilken によって示されている（[03](03-patterns.md) §5）
-- $`\mathcal{R}_3`$ では、最小の $`\lt_3`$ の組が $`\upsilon_{\omega^2} \lt_3 \upsilon_{\omega^2 + 2}`$ であることまで分かっている
+- $`\mathcal{R}_2`$ では、有限の $`\le_2`$ 鎖は $`\psi_0(\Omega_\omega)`$ 未満にいくらでも長く取れ、$`\psi_0(\Omega_\omega)`$ はそういう最小の順序数である。Carlson と Wilken の結果で、この言い方は Wilken, Tracking chains revisited の 1 節にある（[03](03-patterns.md) §5）
+- $`\mathcal{R}_3`$ では、最小の $`\lt_3`$ の組が $`\upsilon_{\omega^2} \lt_3 \upsilon_{\omega^2 + 2}`$ であることまで分かっている。Wilken, Pure Σ2-Elementarity beyond the Core の arXiv 版 v1 の定理 4.3 にある（[03](03-patterns.md) §5）
 
 これらは形式化していない。
 

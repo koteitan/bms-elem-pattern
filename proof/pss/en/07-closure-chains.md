@@ -70,8 +70,8 @@ This is the Löwenheim–Skolem–Tarski argument carried out in the form of an 
 
 The ordinals obtained by this construction are below $`\omega_1`$, but where they lie is unknown.
 
-- In $`\mathcal{R}_2`$, Wilken has shown that finite $`\le_2`$ chains of arbitrary length exist below $`\psi_0(\Omega_\omega)`$ ([03](03-patterns.md) §5)
-- In $`\mathcal{R}_3`$, it is known that the least $`\lt_3`$ pair is $`\upsilon_{\omega^2} \lt_3 \upsilon_{\omega^2 + 2}`$
+- In $`\mathcal{R}_2`$, finite $`\le_2`$ chains of arbitrary length exist below $`\psi_0(\Omega_\omega)`$, and $`\psi_0(\Omega_\omega)`$ is the least such ordinal. This is a result of Carlson and Wilken; the wording is in Section 1 of Wilken, Tracking chains revisited ([03](03-patterns.md) §5)
+- In $`\mathcal{R}_3`$, it is known that the least $`\lt_3`$ pair is $`\upsilon_{\omega^2} \lt_3 \upsilon_{\omega^2 + 2}`$. This is Theorem 4.3 of the arXiv version v1 of Wilken, Pure Σ2-Elementarity beyond the Core ([03](03-patterns.md) §5)
 
 These are not formalized.
 
